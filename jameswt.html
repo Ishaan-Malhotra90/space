@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="jameswt.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="showBlackholes()">James Webb Telescope</a></li>
+      <li><a href="#" onclick="showtopic('types-content')">Components</a></li>
+      <li><a href="space.html">Destination</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="black-holes-content">
+    <div class="black-holes-container">
+      <h>James Webb Space Telescope</h>
+          <p>Launched in 2023, the James Webb Space Telescope embarks
+            on a mission to unravel the universe's enigmas, opening new 
+            frontiers in our understanding of galaxies, stellar birth, 
+            and the potential for extraterrestrial existence.</p>
+      <img class="iss-image" src="jwt.jpg" alt="iss">
+      <div class="border1"></div>
+      <div class="table-container">
+        <ul class="isslist">
+          <li>Launch - 2021</li>
+          <li>Range - 13.6 Billion Light Years</li>
+          <li>Detection Method - Infrared Technology</li>
+          <li>Distance from Earth - 1,500,000 KM</li>
+        </ul>
+        </div>
+    <div class="border2"></div>
+    <h1>More about James Webb Space Telescope:- </h1>
+    <p1>1. The James Webb Space Telescope is the largest, most powerful, and complex space telescope ever built.<br><br>
+    2. It operates primarily in the infrared part of the electromagnetic spectrum, enabling it to study distant objects and peer through cosmic dust clouds.<br><br>
+    3. The telescope's primary mirror has a diameter of 6.5 meters, more than two and a half times larger than the Hubble Space Telescope's mirror.<br><br>
+    4. It is designed to provide unprecedented resolution and sensitivity, allowing scientists to observe the formation of the first galaxies and the atmospheres
+    of exoplanets.<br><br>
+    5. The James Webb Space Telescope is a collaboration between NASA, the European Space Agency (ESA), and the Canadian Space Agency (CSA), showcasing 
+    international cooperation in space exploration.
+    </p1>
+      <div class="border3"></div>
+      </div>
+      </div>
+      <div id="types-content">
+        <div class="types-container">
+            <h5>Components of James Webb Space Telescope:</h5>
+            <h6 class="rs1">Primary Mirror</h6>
+            <p class="rs1p">
+              The primary mirror of JWST is a segmented, gold-coated mirror composed of 18 hexagonal segments. It has a diameter of 6.5 meters, significantly larger than the Hubble Space Telescope's mirror. The primary mirror collects and focuses incoming light for analysis by the scientific instruments.
+            </p>
+            <div class="border4"></div>
+            <h6 class="rs2">Secondary Mirror</h6>
+            <p class="rs2p">
+              The secondary mirror is a smaller, curved mirror located above the primary mirror. Its purpose is to further direct and focus light onto the instruments. The secondary mirror is adjustable, allowing for precise alignment and control of the telescope's optics.
+            </p>
+            <div class="border5"></div>
+            <h6 class="rs3">Sunshield</h6>
+            <p class="rs3p">
+              JWST features a five-layer sunshield that protects the telescope's delicate instruments from the Sun's heat and light. This sunshield is made of a specially designed material that reflects and dissipates the Sun's energy. It also helps to maintain the telescope at extremely low temperatures, essential for infrared observations.
+            </p>
+            <div class="border6"></div>
+            <h6 class="rs4">Optical System</h6>
+            <p class="rs4p">
+              The optical system of JWST includes the primary and secondary mirrors, as well as various other mirrors and lenses. These optical components work together to capture and manipulate incoming light, focusing it onto the scientific instruments.
+            </p>
+            <div class="border7"></div>
+            <h6 class="rs5">Instruments</h6>
+            <p class="rs5p">
+              Near-Infrared Camera (NIRCam):<br>
+               NIRCam captures images in the near-infrared range. It supports both wide-field and coronagraphic imaging and plays a crucial role
+                in studying the early universe, distant galaxies, and exoplanets.<br><br>
+
+              Near-Infrared Spectrograph (NIRSpec):<br>
+               NIRSpec is a spectrograph that splits light into its component wavelengths for detailed analysis. 
+               It enables the study of the chemical composition, temperature, and other properties of celestial objects,
+                including exoplanets and galaxies.<br><br>
+
+              Mid-Infrared Instrument (MIRI):<br>
+               MIRI operates in the mid-infrared range and includes imaging, coronagraphy, and spectroscopy capabilities. It provides insights 
+               into the formation of stars, protoplanetary disks, and the characterization of exoplanet atmospheres.<br><br>
+
+              Fine Guidance Sensor/Near Infrared Imager and Slitless Spectrograph (FGS/NIRISS): <br>
+              FGS/NIRISS serves as both a fine guidance sensor for precise pointing and a scientific instrument. It includes a near-infrared
+               imager and a slitless spectrograph, enabling studies of exoplanets, the early universe, and more.
+            </p>
+            <div class="border8"></div>
+            <h6 class="rs6">Spacecraft Bus</h6>
+            <p class="rs6p">
+              The spacecraft bus provides the structural support and functionality for the telescope and its instruments. It houses the communication systems, power systems, propulsion systems, and thermal control systems necessary for the operation and control of the telescope.
+            </p>
+            <div class="border9"></div>
+            <h6 class="rs7">Communication System</h6>
+            <p class="rs7p">
+              JWST relies on a communication system to transmit data and receive commands from Earth. It utilizes high-gain antennas to establish communication links with ground-based antennas, allowing scientists and engineers to control and receive data from the telescope.
+            </p>
+            <div class="border10"></div>
+            <h6 class="rs8">Command and Data Handling System</h6>
+            <p class="rs8p">
+              This system is responsible for controlling the operations of the telescope and managing the data generated by the instruments. It handles commands, data storage, data processing, and data transmission functions.
+            </p>
+            <div class="border11"></div>
+                    </div>
+                    </div>
+        
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+    showBlackholes();
+  });
+    function showBlackholes() {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        planet.style.display = "none";
+      });
+      var content = document.getElementById("black-holes-content");
+      content.style.display = "block";
+    }
+    
+    function showtopic(planetId) {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        if (planet.id === planetId) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    }
+  </script>
+  </body>
+  </html>

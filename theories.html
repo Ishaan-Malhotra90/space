@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Sections Example</title>
+  <link rel="stylesheet" href="theories.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navlinks">
+      <li class="active"><a href="Homepage.html">Home</a></li>
+      <li class="active"><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="space.html">Discover</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+    
+    <div class="container">
+    <h>#Beyond Our Wildest Imaginations: Space Theories?</h>
+    <p>Space theories are speculative explanations that seek to understand the nature of the cosmos and its various phenomena. They are formulated based on observations, scientific principles, and mathematical models. These theories provide frameworks for interpreting cosmic events and the behavior of celestial objects.
+    </p>
+    <div class="border1"></div>
+    <h1>#TOPICS</h1>
+    <ul class="table">
+      <li class="links" style="--accent-color:#4359a3">
+        <div class="date">Stellar Nucleosynthesis</div>
+        <div class="descr">Stellar nucleosynthesis is the process by which elements heavier than hydrogen and helium are formed within the cores of stars. It's a fundamental concept in astrophysics that explains the origin of elements crucial for building planets, life, and the universe's chemical diversity. </div>
+        <div class="title"><a type="button" class="simple" href="sn.html">Learn</a></div>
+    </li>
+      <li class="links" style="--accent-color:#4359a3">
+          <div class="date">Stellar Evolution Theory</div>
+          <div class="descr">This theory explains how stars go through different stages of life, from their formation to their eventual death. Observations of stars at various stages, from protostars to supernovae, have provided strong evidence for this theory.</div>
+          <div class="title"><a type="button" class="simple" href="set.html">Learn</a></div>
+      </li>
+      <li class="links" style="--accent-color:#4359a3">
+          <div class="date">Big Bang Theory</div>
+          <div class="descr">The leading explanation for the origin of the universe, the Big Bang Theory proposes that the universe began as an incredibly hot and dense state, then expanded and cooled over time. The cosmic microwave background radiation is a key piece of evidence supporting this theory.</div>
+          <div class="title"><a type="button" class="simple" href="bb.html">Learn</a></div>
+      </li>
+      <li class="links" style="--accent-color:#4359a3">
+          <div class="date">Nebular Hypothesis</div>
+          <div class="descr">This theory describes the formation of the solar system from a rotating cloud of gas and dust, known as a solar nebula. The discovery of protoplanetary disks around young stars and the similarities between compositions of planets and the Sun support this idea.</div>
+          <div class="title"><a type="button" class="simple" href="nh.html">Learn</a></div>
+      </li>
+      <li class="links" style="--accent-color:#4359a3">
+          <div class="date">Dark Matter Theory</div>
+          <div class="descr">Although not directly observed, the presence of dark matter is inferred from its gravitational effects on visible matter. This theory helps explain the observed motions of galaxies and galaxy clusters.</div>
+          <div class="title"><a type="button" class="simple" href="dmt.html">Learn</a></div>
+        </li>
+      <li class="links" style="--accent-color:#4359a3">
+          <div class="date">Neutron Star Theory</div>
+          <div class="descr">Neutron stars are extremely dense remnants of massive stars. The theory behind neutron stars is well-supported by observations of pulsars, which are rapidly rotating neutron stars emitting beams of radiation.</div>
+              <div class="title"> <a type="button" class="simple" href="nst.html">Learn</a></div>
+      </li>
+      <li class="links" style="--accent-color:#4359a3">
+          <div class="date">Exoplanet Detection</div>
+          <div class="descr">The discovery of thousands of exoplanets (planets outside our solar system) using various methods, including the transit and radial velocity methods, supports the idea that planets are common around other stars.</div>
+          <div class="title"><a type="button" class="simple" href="ed.html">Learn</a></div>
+      </li>
+  </ul>  
+    <div class="border2"></div>
+      </div>
+
+    
+</body>
+</html>

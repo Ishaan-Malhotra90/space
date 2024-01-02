@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="iss.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="showBlackholes()">International Space Station</a></li>
+      <li><a href="#" onclick="showtopic('types-content')">Researches By ISS</a></li>
+      <li><a href="space.html">Destination</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="black-holes-content">
+    <div class="black-holes-container">
+      <h>International Space Station</h>
+      <p>
+        The International Space Station (ISS) is a multinational research laboratory orbiting Earth,
+         where astronauts conduct experiments and study the effects of space travel. It symbolizes
+          international cooperation and paves the way for future missions to the Moon and Mars.</p>
+      <img class="iss-image" src="iss1.png" alt="iss">
+      <div class="border1"></div>
+      <div class="table-container">
+        <ul class="isslist">
+          <li>Construction - Collaborative project</li>
+          <li>Size - Approximately 109 meters</li>
+          <li>Length - 420,000 kilograms</li>
+          <li>Capacity - Up to 6 astronauts</li>
+          <li>Altitude - Approximately 400 kilometers</li>
+          <li>Orbit - Around the Earth</li>
+        </ul>
+       
+    </div>
+    <div class="border2"></div>
+    <h1>More about International Space Station: </h1>
+    <p1>1. The ISS is a collaborative project involving space agencies from 15 countries, including NASA (United States),
+         Roscosmos (Russia), ESA (European Space Agency), JAXA (Japan Aerospace Exploration Agency), and  CSA 
+         (Canadian Space Agency).<br><br>
+      2. The ISS exemplifies international cooperation in space exploration. Different countries contribute modules, equipment,
+       and resources to the station's operations, maintenance, and research activities.<br><br>
+      3. : The ISS has been continuously inhabited since November 2000, and it has been visited by astronauts from various
+      countries during its existence. It serves as a platform for testing technologies and systems that will be essential for 
+      future long-duration space missions, including those to the Moon and Mars.<br><br>
+      4. The ISS is supported by regular resupply missions that deliver food, water, equipment, and experiments. Cargo
+      spacecraft, such as SpaceX's Dragon and Northrop Grumman's Cygnus, are used for resupply missions.
+      </p1> 
+      <div class="border3"></div>
+      </div>
+      </div>
+      <div id="types-content">
+        <div class="types-container">
+            <h5>RESEARCHES BY INTERNATIONAL SPACE STATION:</h5>
+            <h6 class="rs1">Collaboration and International Cooperation</h6>
+            <p class="rs1p">
+              Year: 1998<br>
+              Example: Joint research projects among international partners<br>
+              Description: Showcasing the success of international collaboration in space exploration and fostering diplomatic relations.
+            </p>
+            <div class="border4"></div>
+            <h6 class="rs2">Spacewalk and Extravehicular Activities (EVAs)</h6>
+            <p class="rs2p">
+              Year: 2000<br>
+              Example: Repairing and maintaining external equipment<br>
+              Description: Advancing techniques and tools for astronauts to perform maintenance and construction tasks outside the ISS.
+            </p>
+            <div class="border5"></div>
+            <h6 class="rs3">Microgravity Effects on Human Health</h6>
+            <p class="rs3p">
+              Year: 2001<br>
+              Example: Changes in bone density<br>
+              Description: Studying the impact of extended periods in space on human bone health and developing countermeasures.
+            </p>
+            <div class="border6"></div>
+            <h6 class="rs4">Earth Observation and Environmental Studies</h6>
+            <p class="rs4p">
+              Year: 2001<br>
+              Example: Monitoring climate patterns from space<br>
+              Description: Collecting data on Earth's atmosphere, weather systems, and environmental changes from a unique vantage point.
+            </p>
+            <div class="border7"></div>
+            <h6 class="rs5">Experiments in Material Science</h6>
+            <p class="rs5p">
+              Year: 2003<br>
+              Example: Investigation of fluid behavior in microgravity<br>
+              Description: Exploring the properties and behavior of materials in the absence of gravity to develop new technologies.
+            </p>
+            <div class="border8"></div>
+            <h6 class="rs6">Water Recycling and Life Support Systems</h6>
+            <p class="rs6p">
+              Year: 2008<br>
+              Example: Purification of urine into drinking water<br>
+              Description: Developing technologies for recycling and reusing water resources in space to support extended missions.
+            </p>
+            <div class="border9"></div>
+            <h6 class="rs7">Space-based Agriculture</h6>
+            <p class="rs7p">
+              Year: 2015<br>
+              Example: Growth of lettuce in space<br>
+              Description: Investigating sustainable food production methods for long-duration space missions.
+            </p>
+            <div class="border10"></div>
+                    </div>
+                    </div>
+        
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+    showBlackholes();
+  });
+    function showBlackholes() {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        planet.style.display = "none";
+      });
+      var content = document.getElementById("black-holes-content");
+      content.style.display = "block";
+    }
+    
+    function showtopic(planetId) {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        if (planet.id === planetId) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    }
+  </script>
+  </body>
+  </html>

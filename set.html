@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="set.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="space.html">Discover</a></li>
+      <li><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Topics</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="set-content">
+    <div class="set-container">
+      <h>Stellar Evolution Theory:</h>
+      <p>1. Protostar Formation:<br>
+        Stars begin as dense regions within molecular clouds, where gravity causes gas and dust to collapse. As the core contracts, it heats up, forming a protostar. This phase is characterized by accretion of material from the surrounding disk onto the protostar.
+        <br><br>
+        2. Main Sequence Phase:<br>
+        As the protostar's core temperature rises, nuclear fusion reactions start, converting hydrogen into helium in its core. The energy produced by these reactions counteracts the inward pull of gravity, leading to a stable equilibrium known as the main sequence. Stars spend the majority of their lives in this phase.
+        <br><br>
+        3. Red Giant Phase:<br>
+        When the hydrogen in the core is mostly exhausted, gravity compresses the core, raising its temperature. The outer layers expand and cool, causing the star to become a red giant. In this phase, heavier elements are formed through helium and other fusion reactions in the star's outer shells.
+        <br><br>
+        4. Helium Burning Phase:<br>
+        In massive stars, when the core's temperature becomes high enough, helium nuclei fuse to form heavier elements like carbon and oxygen. This process occurs in a shell around the core.
+        <br><br>
+        5. Planetary Nebula and White Dwarf Formation:<br>
+        In low- to medium-mass stars, the outer layers are expelled, forming a colorful shell called a planetary nebula. The remaining core contracts to become a white dwarf, a dense, Earth-sized object supported by electron degeneracy pressure.
+        <br><br>
+        6. Supernova and Neutron Star or Black Hole Formation:<br>
+        In massive stars, once heavier elements have formed in the core, fusion reactions cease. The core collapses under gravity, triggering a supernova explosion. Depending on the mass, the core becomes either a neutron star (for lower masses) or collapses further to become a black hole (for higher masses).
+        <br><br>
+        7. Stellar Remnants and Stellar Recycling:<br>
+        Stellar remnants like white dwarfs, neutron stars, and black holes continue to influence their surroundings through gravitational interactions. They may interact with other stars, accrete material, or even merge in some cases, releasing energy and enriching the interstellar medium with heavier elements.</p>
+      <div class="border1"></div>
+      </div>
+      </div>
+
+  </body>
+  </html>

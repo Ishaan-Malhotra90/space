@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="ed.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="space.html">Discover</a></li>
+      <li><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Topics</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="nst-content">
+    <div class="nst-container">
+      <h>Exoplanet Detection:</h>
+      <p>1. Transit Method:<br>
+        The transit method involves observing a star's brightness over time. If a planet passes in front of its host star from our perspective, it causes a slight and temporary dip in the star's brightness. By measuring these periodic changes, astronomers can determine the planet's size, orbital period, and distance from its star.
+        <br><br>
+        2. Radial Velocity Method (Doppler Method):<br>
+        As a planet orbits its host star, the star also experiences a gravitational pull from the planet. This causes the star to exhibit a slight "wobble" in its motion. By measuring the star's radial velocity (how it moves towards or away from us), astronomers can infer the presence, mass, and orbital characteristics of an exoplanet.
+        <br><br>
+        3. Direct Imaging:<br>
+        Direct imaging involves capturing an actual image of an exoplanet. This is challenging due to the brightness of stars overwhelming the light from their planets. Advanced techniques, such as using coronagraphs to block out the star's light, are employed to reveal the faint glow of exoplanets. This method provides valuable information about exoplanet atmospheres and compositions.
+        <br><br>
+        4. Microlensing:<br>
+        In microlensing, a foreground star acts as a gravitational lens, bending and magnifying the light of a background star. If a planet orbits the foreground star, it can create additional distortions in the light curve. This method is useful for detecting planets at various distances and is sensitive to low-mass planets.
+        <br><br>
+        5. Astrometry:<br>
+        Astrometry involves tracking the position of a star over time. A star with an orbiting planet will show a periodic "wobble" in its position due to the gravitational influence of the planet. Astrometry can provide information about a planet's mass, orbit, and inclination.
+        <br><br>
+        6. Transit Timing Variations (TTV) and Transit Duration Variations (TDV):<br>
+        If a star has multiple planets, their gravitational interactions can cause variations in the timing and duration of transits. Observing these variations allows astronomers to infer the presence of additional planets in the system.
+        <br><br>
+        7. Pulsar Timing:<br>
+        For planets orbiting pulsars (neutron stars emitting regular pulses of radiation), changes in the timing of these pulses can indicate the presence of planets. The planet's gravitational pull causes slight perturbations in the pulsar's rotation period.
+        <br><br>
+        8. Gravitational Microlensing:<br>
+        In gravitational microlensing, a massive object like a star or planet acts as a lens, magnifying and distorting the light of a background star. If a planet orbits the lensing star, it can create additional features in the light curve.</p>
+      <div class="border1"></div>
+      </div>
+      </div>
+
+  </body>
+  </html>

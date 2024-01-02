@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="nh.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="space.html">Discover</a></li>
+      <li><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Topics</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="nh-content">
+    <div class="nh-container">
+      <h>Nebular Hypothesis:</h>
+      <p>1. Solar Nebula Formation:<br>
+        The process begins with the gravitational collapse of a massive molecular cloud composed of gas and dust in space. Factors such as shockwaves from nearby supernovae or the passage of another star trigger the collapse.
+        <br><br>
+        2. Formation of Protoplanetary Disk:<br>
+        As the molecular cloud collapses, it begins to rotate due to the conservation of angular momentum. The central part forms a protostar (the Sun-to-be), while the surrounding material flattens into a spinning disk called a protoplanetary disk.
+        <br><br>
+        3. Accretion of Planetesimals:<br>
+        Tiny dust particles within the protoplanetary disk collide and stick together due to electrostatic forces and other factors. This process leads to the formation of planetesimals, small rocky or icy bodies that serve as building blocks for planets.
+        <br><br>
+        4. Planet Formation:<br>
+        Planetesimals continue to collide and accumulate more material, growing in size. Larger bodies known as protoplanets form from the merging of these planetesimals. Over time, the protoplanets continue to accrete gas and dust from the surrounding disk.
+        <br><br>
+        5. Clearing of Debris:<br>
+        The young Sun begins to emit solar wind, which creates a pressure gradient in the protoplanetary disk. This pressure gradient pushes away lighter gases and dust from the inner part of the disk, leaving behind mostly solid material.
+        <br><br>
+        6. Differentiation and Final Orbits:<br>
+        Protoplanets differentiate, with heavier elements sinking to their cores and lighter materials accumulating in their outer layers. Gravitational interactions cause these protoplanets to migrate to stable orbits, resulting in the formation of planets.
+        <br><br>
+        7. Late Heavy Bombardment:<br>
+        During the early stages of the solar system's formation, there was a period of intense bombardment of the inner planets by leftover planetesimals and other debris. This phase, known as the Late Heavy Bombardment, shaped the surfaces of these planets.
+        <br><br>
+        8. Solar System Maturity:<br>
+        Over millions of years, the solar nebula's gas and dust are either incorporated into planets, swept away by solar wind, or blown into space. The solar system reaches a state of equilibrium, with planets in their stable orbits and the Sun shining brightly.</p>
+      <div class="border1"></div>
+      </div>
+      </div>
+
+  </body>
+  </html>

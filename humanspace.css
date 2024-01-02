@@ -1,0 +1,984 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Text:ital@1&family=Dosis:wght@500&family=JetBrains+Mono:ital@1&family=Lato:ital,wght@1,700&family=Lobster&family=Pacifico&family=Prompt:ital,wght@1,300&family=Roboto+Slab:wght@800&family=Roboto:ital,wght@0,300;0,700;1,400;1,700&family=Satisfy&family=Ubuntu:ital,wght@1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: black;
+  color: white;
+  background-attachment: fixed;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  text-align: justify;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(32, 32, 32, 0.4);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255,255,255,0.025);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 4vmin;
+  margin-right: 6vmin;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4vmin;
+}
+.container
+{
+  display: block;
+  width: 89vw;
+  height: 50vh;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.container h3
+ {
+  background: linear-gradient(90deg, #ffed75, #ff9a8b, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 6vmin;
+  position: relative;
+  top: 0vh;
+  left: 5vw;
+  white-space: nowrap;
+}
+
+.container p {
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4vmin;
+  position: relative;
+  top: 0vh;
+  left: 5vw;
+}
+.border1 {
+  position: relative;
+  top: 7vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+}
+.nasa-container
+{
+  display: block;
+  width: 90vw;
+  height: 50vh;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  justify-content: center;
+  z-index: 1;
+}
+.nasa-container h1
+{
+  color: white;
+  position: relative;
+  top: 0;
+  left: 5vw;
+  text-align: center;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #3498db, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.nasatable {
+  --col-gap: 4vmin;
+  --row-gap: 2vmin;
+  --line-w: 1vmin;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60vw, 90vw);
+  margin-inline: auto;
+  position: relative;
+  top: 10vh;
+  left: 5vw;
+}
+.nasatable::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 50;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+.nasatable li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+.nasatable li {
+  grid-column: 2;
+  --inlineP: 2vmin;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.nasatable li .date {
+  --dateH: 5vmin;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: black;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+.nasatable li .date::after {
+  content: "";
+  position: absolute;
+  width: 2vmin;
+  aspect-ratio: 1;
+  background: black; 
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+.nasatable li .title,
+.nasatable li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.nasatable li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: bold;
+  font-size: 4vmin;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+}
+.nasatable li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+  font-weight: bold;
+  font-size: 3vmin;
+  font-style: italic;
+  font-family: 'Dosis', sans-serif;
+}
+
+.nasatable li .title::before,
+.nasatable li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.nasatable li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.nasatable li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+.isro-container
+{
+  display: block;
+  width: 90vw;
+  height: 50vh;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  justify-content: center;
+  z-index: 1;
+}
+.isro-container h1
+{
+  color: white;
+  position: relative;
+  top: 0;
+  left: 5vw;
+  text-align: center;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #3498db, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.isrotable {
+  --col-gap: 4vmin;
+  --row-gap: 2vmin;
+  --line-w: 1vmin;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60vw, 90vw);
+  margin-inline: auto;
+  position: relative;
+  top: 10vh;
+  left: 5vw;
+}
+.isrotable::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 50;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+.isrotable li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+.isrotable li {
+  grid-column: 2;
+  --inlineP: 2vmin;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.isrotable li .date {
+  --dateH: 5vmin;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: black;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+.isrotable li .date::after {
+  content: "";
+  position: absolute;
+  width: 2vmin;
+  aspect-ratio: 1;
+  background: black; 
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+.isrotable li .title,
+.isrotable li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.isrotable li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: bold;
+  font-size: 4vmin;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+}
+.isrotable li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+  font-weight: bold;
+  font-size: 3vmin;
+  font-style: italic;
+  font-family: 'Dosis', sans-serif;
+}
+
+.isrotable li .title::before,
+.isrotable li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.isrotable li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.isrotable li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+.jaxa-container
+{
+  display: block;
+  width: 90vw;
+  height: 50vh;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  justify-content: center;
+  z-index: 1;
+}
+.jaxa-container h1
+{
+  color: white;
+  position: relative;
+  top: 0;
+  left: 5vw;
+  text-align: center;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #3498db, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.jaxatable {
+  --col-gap: 4vmin;
+  --row-gap: 2vmin;
+  --line-w: 1vmin;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60vw, 90vw);
+  margin-inline: auto;
+  position: relative;
+  top: 10vh;
+  left: 5vw;
+}
+.jaxatable::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 50;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+.jaxatable li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+.jaxatable li {
+  grid-column: 2;
+  --inlineP: 2vmin;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.jaxatable li .date {
+  --dateH: 5vmin;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: black;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+.jaxatable li .date::after {
+  content: "";
+  position: absolute;
+  width: 2vmin;
+  aspect-ratio: 1;
+  background: black; 
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+.jaxatable li .title,
+.jaxatable li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.jaxatable li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: bold;
+  font-size: 4vmin;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+}
+.jaxatable li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+  font-weight: bold;
+  font-size: 3vmin;
+  font-style: italic;
+  font-family: 'Dosis', sans-serif;
+}
+
+.jaxatable li .title::before,
+.jaxatable li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.jaxatable li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.jaxatable li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+.csa-container
+{
+  display: block;
+  width: 90vw;
+  height: 50vh;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  justify-content: center;
+  z-index: 1;
+}
+.csa-container h1
+{
+  color: white;
+  position: relative;
+  top: 0;
+  left: 5vw;
+  text-align: center;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #3498db, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.csatable {
+  --col-gap: 4vmin;
+  --row-gap: 2vmin;
+  --line-w: 1vmin;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60vw, 90vw);
+  margin-inline: auto;
+  position: relative;
+  top: 10vh;
+  left: 5vw;
+}
+.csatable::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 50;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+.csatable li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+.csatable li {
+  grid-column: 2;
+  --inlineP: 2vmin;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.csatable li .date {
+  --dateH: 5vmin;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: black;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+.csatable li .date::after {
+  content: "";
+  position: absolute;
+  width: 2vmin;
+  aspect-ratio: 1;
+  background: black; 
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+.csatable li .title,
+.csatable li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.csatable li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: bold;
+  font-size: 4vmin;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+}
+.csatable li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+  font-weight: bold;
+  font-size: 3vmin;
+  font-style: italic;
+  font-family: 'Dosis', sans-serif;
+}
+
+.csatable li .title::before,
+.csatable li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.csatable li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.csatable li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+.roscosmos-container
+{
+  display: block;
+  width: 90vw;
+  height: 50vh;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  justify-content: center;
+  z-index: 1;
+}
+.roscosmos-container h1
+{
+  color: white;
+  position: relative;
+  top: 0;
+  left: 5vw;
+  text-align: center;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #3498db, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.roscosmostable {
+  --col-gap: 4vmin;
+  --row-gap: 2vmin;
+  --line-w: 1vmin;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60vw, 90vw);
+  margin-inline: auto;
+  position: relative;
+  top: 10vh;
+  left: 5vw;
+}
+.roscosmostable::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 50;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+.roscosmostable li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+.roscosmostable li {
+  grid-column: 2;
+  --inlineP: 2vmin;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.roscosmostable li .date {
+  --dateH: 5vmin;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: black;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+.roscosmostable li .date::after {
+  content: "";
+  position: absolute;
+  width: 2vmin;
+  aspect-ratio: 1;
+  background: black; 
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+.roscosmostable li .title,
+.roscosmostable li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.roscosmostable li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: bold;
+  font-size: 4vmin;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+}
+.roscosmostable li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+  font-weight: bold;
+  font-size: 3vmin;
+  font-style: italic;
+  font-family: 'Dosis', sans-serif;
+}
+
+.roscosmostable li .title::before,
+.roscosmostable li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.roscosmostable li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.roscosmostable li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+.menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  @media(max-width: 1024px)
+{
+  *
+  {
+    text-align: center;
+  }
+  body
+  {
+    text-align: center;
+    overflow: scroll;
+    min-height: 100vh;
+  }nav
+  {
+    padding: 0%;
+    position: fixed; 
+     justify-content: center;
+     border-bottom-right-radius: 50%;
+  }
+  nav ul
+  {
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 40vh;
+    margin-top: -2000px;
+    transition: all 0.5s ease;
+    z-index: 2;
+   
+  }
+  nav li
+  {
+    margin: 30px auto;
+  }
+  .mobile-menu
+  {
+    margin-top: 0px;
+    border-bottom-right-radius: 30%;
+  }
+  .menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: block;
+    z-index: 3;
+  }
+  .nasa-container 
+  {
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .nasatable {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .nasatable::before {
+    grid-column: 2;
+  }
+  .nasatable li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .nasatable li:nth-child(even) {
+    grid-column: 3;
+  }
+  .nasatable li:nth-child(2) {
+    grid-row: 2/4;
+  }
+  .nasatable li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+  .nasatable li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .nasatable li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+  .isrotable {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .isrotable::before {
+    grid-column: 2;
+  }
+  .isrotable li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .isrotable li:nth-child(even) {
+    grid-column: 3;
+  }
+  .isrotable li:nth-child(2) {
+    grid-row: 2/4;
+  }
+  .isrotable li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+  .isrotable li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .isrotable li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+  .jaxatable {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .jaxatable::before {
+    grid-column: 2;
+  }
+  .jaxatable li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .jaxatable li:nth-child(even) {
+    grid-column: 3;
+  }
+  .jaxatable li:nth-child(2) {
+    grid-row: 2/4;
+  }
+  .jaxatable li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+  .jaxatable li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .jaxatable li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+  .csatable {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .csatable::before {
+    grid-column: 2;
+  }
+  .csatable li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .csatable li:nth-child(even) {
+    grid-column: 3;
+  }
+  .csatable li:nth-child(2) {
+    grid-row: 2/4;
+  }
+  .csatable li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+  .csatable li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .csatable li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+  .roscosmostable {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .roscosmostable::before {
+    grid-column: 2;
+  }
+  .roscosmostable li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .roscosmostable li:nth-child(even) {
+    grid-column: 3;
+  }
+  .roscosmostable li:nth-child(2) {
+    grid-row: 2/4;
+  }
+  .roscosmostable li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+  .roscosmostable li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .roscosmostable li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}

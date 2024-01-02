@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FactoidExpress</title>
+  <link rel="stylesheet" href="isro.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="showBlackholes()">ISRO</a></li>
+      <li><a href="#" onclick="showtopic('timeline-content')">Timeline</a></li>
+      <li><a href="#" onclick="showtopic('types-content')">Headquarters</a></li>
+      <li><a href="#" onclick="showtopic('launchpads-content')">Launchpads</a></li>
+      <li><a href="space.html">Destination</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+    <div id="black-holes-content">
+    <div class="black-holes-container">
+      <h>ISRO: Pioneering Space Exploration and Beyond</h>
+      <p>
+        The Indian Space Research Organisation (ISRO) is the space agency of the Government of India, celebrated for its groundbreaking 
+        achievements in space research and exploration. Since its inception in 1969, ISRO has established itself as a global space player,
+         renowned for its cost-effective and innovative space missions. Notable triumphs include the Chandrayaan and Mars Orbiter Mission
+          (Mangalyaan), marking India's presence as the first Asian mission to reach Mars. Additionally, ISRO's satellite launch vehicles, 
+          like the PSLV and GSLV, have demonstrated reliability in deploying a wide range of satellites. With the Gaganyaan project, ISRO
+          is venturing into human spaceflight. Moreover, the agency's applications of space technology for societal benefits, international 
+          collaborations, and its frugal approach to space exploration have earned worldwide acclaim. ISRO's unwavering dedication continues
+           to fuel India's aspirations in the cosmic realm, pushing the boundaries of space exploration and inspiring the world.</p>
+      <div class="border1"></div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+    <div class="containertimeline" id="timeline-content">
+      <h1>Life on Earth Timeline</h1>
+
+<div class="selector">
+	<a href="#birth">1962<span>A.D</span><strong>Birth of the ISRO</strong></a>
+	<a href="#know">1963<span>A.D</span><strong>Establishment of TERLS</strong></a>
+	<a href="#photosynthesis">1965<span>A.D</span><strong>First Rocket Rohini-1</strong></a>
+	<a href="#multicellular">1972<span>A.D</span><strong>Inida's first satellite</strong></a>
+	<a href="#plants">1975<span>A.D</span><strong>First satellite launch vehicle</strong></a>
+	<a href="#animals">1980<span>A.D</span><strong>PSLV program initiated</strong></a>
+	<a href="#ediacaran">1982<span>A.D</span><strong>First communication satellite</strong></a>
+	<a href="#cambrian">1983<span>A.D</span><strong>IRS program launched</strong></a>
+	<a href="#tetrapods">1984<span>A.D</span><strong>GSLV program initiated</strong></a>
+	<a href="#dinosaurus">2001<span>A.D</span><strong>First satellite with internet</strong></a>
+	<a href="#mammals">2008<span>A.D</span><strong>First lunar mission</strong></a>
+	<a href="#primates">2014<span>A.D</span><strong>Mars orbiter mission</strong></a>
+	<a href="#apes">2017<span>A.D</span><strong>104 satellite launched in a flight</strong></a>
+	<a href="#hominini">2019<span>A.D</span><strong>Second lunar mission</strong></a>
+	<a href="#australopithecus">2022<span>A.D</span><strong>Gaganyaan program announced</strong></a>
+	<a href="#habilis">2023<span>A.D</span><strong>Third lunar mission</strong></a>
+</div>
+
+<ul class="timeline">
+		<li>
+		<h2 id="birth"></h2>
+		<time><strong>1962</strong><span>A.D</span></time>
+		<strong><span>Birth of the ISRO</span></strong>
+		<span></span>
+		</li>
+		<li>
+		<h2 id="know"></h2>
+		<time><strong>1963</strong><span>A.D</span></time>
+		<strong><span>Establishment of TERLS</span></strong>
+		<span></span>
+		</li>
+		<li>
+		<h2 id="photosynthesis"></h2>
+		<time><strong>1962</strong><span>A.D</span></time>
+		<strong><span>First Rocket Rohini-1</span></strong>
+		<span></span>
+		</li>
+		<li>
+		<h2 id="multicellular"></h2>
+		<time><strong>1972</strong><span>A.D</span></time>
+		<strong><span>India's First Satellite</span></strong>
+		<span></span>
+		</li>
+		<li>
+		<h2 id="plants"></h2>
+		<time><strong>1975</strong><span>A.D</span></time>
+		<strong><span>First satellite launch vehicle</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="animals"></h2>
+		<time><strong>1980</strong><span>A.D</span></time>
+		<strong><span>PSLV program initiated</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="ediacaran"></h2>
+		<time><strong>1982</strong><span>A.D</span></time>
+		<strong><span>First communication satellite</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="cambrian"></h2>
+		<time><strong>1983</strong><span>A.D</span></time>
+		<strong><span>IRS program launched</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="tetrapods"></h2>
+		<time><strong>1984</strong><span>A.D</span></time>
+		<strong><span>GSLV program initiated</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="dinosaurus"></h2>
+		<time><strong>2001</strong><span>A.D</span></time>
+		<strong><span>First satellite with internet</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="mammals"></h2>
+		<time><strong>2008</strong><span>A.D</span></time>
+		<strong><span>First lunar mission</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="primates"></h2>
+		<time><strong>2014</strong><span>A.D</span></time>
+		<strong><span>Mars orbiter mission</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="apes"></h2>
+		<time><strong>2017</strong><span>A.D</span></time>
+		<strong><span>104 satellite launched in a flight</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="hominini"></h2>
+    <time><strong>2019</strong><span>A.D</span></time>
+		<strong><span>Second lunar mission</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="australopithecus"></h2>
+		<time><strong>2022</strong><span>A.D</span></time>
+		<strong><span>Gaganyaan program announced</span></strong>
+		<span></span>
+	</li>
+	<li>
+		<h2 id="habilis"></h2>
+		<time><strong>2023</strong><span>A.D</span></time>
+		<strong><span>Third lunar mission</span></strong>
+		<span></span>
+	</li>
+<ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="types-content">
+        <div class="types-container">
+          <h2>ISRO Headquarters: A Historical Center of India's Space Pioneers</h2>
+          <p>
+            The Indian Space Research Organisation (ISRO) headquarters, located in Bengaluru, Karnataka, has been the heart of India's extraordinary
+            space exploration journey since its establishment in 1969. From humble beginnings to becoming a global space player, the headquarters
+            has been instrumental in shaping ISRO's groundbreaking achievements. Over the years, it has witnessed historic moments, including the
+            launch of India's first satellite, Aryabhata, in 1975, the successful missions to the Moon (Chandrayaan-1) and Mars (Mangalyaan), and
+            the development of reliable launch vehicles like the Polar Satellite Launch Vehicle (PSLV). This historical center of innovation,
+            research, and international collaboration continues to inspire generations, driving India's commitment to space exploration,
+            satellite technology, and expanding humanity's understanding of the universe.</p>
+              <div class="border2"></div>
+          </div>
+    </div>
+    
+    <div id="launchpads-content">
+      <div class="launchpads-container">
+        <h3>ISRO's Launch Pads: Where India's Dreams Touch the Sky</h3>
+        <p>
+          The Indian Space Research Organisation (ISRO) has several launch pads and facilities for launching various types of rockets and satellites. As of my last knowledge update in September 2021, here are some of the prominent launch pads used by ISRO:
+          <br><br>
+          1. Satish Dhawan Space Centre (SDSC) SHAR, Sriharikota: This is the primary launch site for ISRO, located on Sriharikota Island in Andhra Pradesh, India. It has multiple launch pads for various types of missions.
+          <br><br>
+          a. First Launch Pad (FLP): <br>This launch pad is used for launching Polar Satellite Launch Vehicles (PSLV) and some Geosynchronous Satellite Launch Vehicles (GSLV) missions.
+          <br>
+          b. Second Launch Pad (SLP):<br> This launch pad is mainly used for launching GSLV Mk III rockets, which are used for heavier payloads, including the Chandrayaan-2 lunar mission and the Gaganyaan crewed mission.
+          <br><br>
+          2. Thumba Equatorial Rocket Launching Station (TERLS):<br> Located in Thumba, Kerala, this facility is used for launching sounding rockets to study the Earth's upper atmosphere and ionosphere.
+          <br><br>
+          3. Balasore Rocket Launching Station (BRLS):<br> Also known as Wheeler Island, this facility in Odisha is primarily used for testing and launching ballistic missiles. It is also occasionally used for launching satellite launch vehicles.
+          
+          </p>
+           <div class="border3"></div>   
+      </div>
+      </div>
+    
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+    showBlackholes();
+  });
+    function showBlackholes() {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        planet.style.display = "none";
+      });
+      var content = document.getElementById("black-holes-content");
+      content.style.display = "block";
+    }
+    
+    function showtopic(planetId) {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        if (planet.id === planetId) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    }
+  </script>
+  </body>
+  </html>

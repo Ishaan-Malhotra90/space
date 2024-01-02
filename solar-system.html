@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="solar-system.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="showMercury()">Mercury</a></li>
+      <li><a href="#" onclick="showPlanet('venus-content')">Venus</a></li>
+      <li><a href="#" onclick="showPlanet('earth-content')">Earth</a></li>
+      <li><a href="#" onclick="showPlanet('mars-content')">Mars</a></li>
+      <li><a href="#" onclick="showPlanet('jupiter-content')">Jupiter</a></li>
+      <li><a href="#" onclick="showPlanet('saturn-content')">Saturn</a></li>
+      <li><a href="#" onclick="showPlanet('uranus-content')">Uranus</a></li>
+      <li><a href="#" onclick="showPlanet('neptune-content')">Neptune</a></li>
+      <li><a href="space.html">Destination</a></li>
+      </ul>
+      
+      <img src="menu.png" class="menu-btn">
+    </nav>
+    <script>
+      const menubtn = document.querySelector('.menu-btn');
+      const navlinks = document.querySelector('.navlinks');
+      const body = document.querySelector('body');
+    
+      menubtn.addEventListener('click', () => {
+        navlinks.classList.toggle('mobile-menu');
+      });
+    
+      body.addEventListener('click', (event) => {
+        // Check if the click happened outside the navbar or on a link within the navbar
+        if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+          navlinks.classList.remove('mobile-menu');
+        }
+      });
+    
+      // Add click event listener to all anchor tags within the navbar
+      const navLinks = document.querySelectorAll('.navlinks a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          // Close the mobile menu when a link is clicked
+          navlinks.classList.remove('mobile-menu');
+        });
+      });
+    </script>
+  </div>
+  <div id="mercury-content">
+    <div class="mercury-container">
+      <h2 class="mh">The Mercury</h2>
+      <p class="mp">Mercury, the closest planet to the Sun, is a rocky 
+        and barren world with extreme temperatures. 
+        It lacks an atmosphere, resulting in scorching hot
+         days and freezing cold nights.</p>
+         <img class="mercury-image" src="mercury1.jpg" alt="Mercury">
+         <div class="border1"></div>
+         <p1>Radius: 2439.7 KM<br>
+          Number of Moons: 0<br>
+          Type: Terrestrial<br>
+          Distance from Sun: 53,782,000 km<br>
+          Age: 4.503 billion (years)</p1>
+          <div class="border2"></div> 
+    <h4>Some Facts about Mercury:- </h4>
+    <p2>1. Mercury has the greatest temperature variations in our solar system, with scorching hot daytime temperatures and freezing cold nights.<br><br>
+      2. Despite being the closest planet to the Sun, Mercury is not the hottest planet. Venus holds that title due to its thick atmosphere.<br><br>
+      3. Mercury has a very slow rotation, taking about 59 Earth days to complete one rotation on its axis.<br><br>
+      4. It has a relatively thin atmosphere consisting mostly of trace amounts of helium and hydrogen.<br><br>
+      5. Mercury is known for its long, meandering cliffs called "scarps," which are believed to be the result of the planet's cooling and shrinking over time.</p2>
+      <div class="border3"></div> 
+</div>
+</div>
+<div id="venus-content">
+  <div class="venus-container">
+    <h2>The Venus</h2>
+    <p>Venus, Earth's "sister planet," is the second planet 
+      from the Sun with a thick carbon dioxide atmosphere,
+       causing extreme temperatures and a dense cloud cover.</p>
+       <img class="venus-image" src="venus1.jpg" alt="Venus">
+       <div class="border1"></div>
+       <p1>Radius: 6051.8 KM<br>
+        Number of Moons: 0<br>
+        Type: Terrestrial<br>
+        Distance from Sun: 108,230,000 km<br>
+        Age: 4.503 billion (years)</p1>
+        <div class="border2"></div>
+  <h4>Some Facts about Venus:- </h4>
+  <p2>1. Venus has the longest day of any planet in our solar system, lasting longer than its year.<br><br>
+    2. Venus' surface temperature is a scorching 864 degrees Fahrenheit (462 degrees Celsius) due to its dense atmosphere.<br><br>
+    3. Venus is the only planet named after a female figure, the Roman goddess of love and beauty.<br><br>
+    4. Venus appears exceptionally bright in the night sky due to its reflective sulfuric acid clouds, earning it the titles "Evening Star" and "Morning Star."<br><br>
+    5. Venus rotates in the opposite direction, known as retrograde rotation, with the Sun rising in the west and setting in the east.</p2>
+    <div class="border3"></div>
+</div>
+</div>
+    <div id="earth-content">
+      <div class="earth-container">
+        <h2>The Earth</h2>
+        <p>Planet Earth is a beautiful, blue planet teeming with life, nestled in the 
+          vastness of the cosmos.It is our home, offering diverse ecosystems and a
+           delicate balance that sustains all living beings.</p>
+           <img class="earth-image" src="earth1.jpg" alt="Earth">
+           <div class="border1"></div>
+           <p1>Radius: 6378.1 KM<br>
+            Number of Moons: 1<br>
+            Type: Terrestrial<br>
+            Distance from Sun: 151,920,000 km<br>
+            Age: 4.53 billion (years)</p1>
+            <div class="border2"></div>
+      <h4>Some Facts about Earth:- </h4>
+      <p2>1. Earth experiences a phenomenon called "earthquake lights," where luminous flashes or glows are observed in the sky before, during, or
+        after an earthquake.<br><br>
+        2. The Earth's rotation is gradually slowing down over time due to tidal forces from the Moon, causing the length of a day to increase by
+        approximately 1.7 milliseconds per century.<br><br>
+        3. Earth has a hidden continent called Zealandia, mostly submerged beneath the ocean, which includes New Zealand and New Caledonia.<br><br>
+        4. There are more living organisms in a teaspoon of soil on Earth than there are people on the planet.<br><br>
+        5. Earth's atmosphere extends much farther than commonly known, reaching up to 10,000 kilometers (6,200 miles) into space, 
+        albeit becoming extremely thin.</p2>
+        <div class="border3"></div>
+  </div></div>
+  <div id="mars-content">
+    <div class="mars-container">
+     
+      <h2>The Mars</h2>
+      <p>The fourth planet, famous for its red color and potential for life, captivates scientists with its Earth-like features and ongoing exploration.</p>
+      <img class="mars-image" src="mars1.jpg" alt="Mars">
+      <div class="border1"></div>
+      <p1>Radius: 3389.5 KM<br>
+        Number of Moons: 2<br>
+        Type: Terrestrial<br>
+        Distance from Sun: 250,570,000 km<br>
+        Age: 4.603 billion (years)</p1>
+        <div class="border2"></div>
+    <h4>Some Facts about Mars:- </h4>
+    <p2>1. Mars is home to Olympus Mons, the solar system's largest volcano.<br><br>
+      2. Valles Marineris on Mars is the deepest and longest canyon in our solar system.<br><br>
+      3. Mars has polar ice caps consisting of water ice and carbon dioxide.<br><br>
+      4. Mars has a thin atmosphere, mostly composed of carbon dioxide.<br><br>
+      5. Mars is a target for exploration, with missions studying its geology and potential for life.</p2>
+      <div class="border3"></div>
+</div>
+  </div>
+  <div id="jupiter-content">
+    <div class="jupiter-container">
+      <h2>The Jupiter</h2>
+      <p>Jupiter, the awe-inspiring giant of our solar system, dazzles with its colossal 
+        size,swirling storms, and a gravitational embrace that safeguards the inner 
+        planets from cosmic threats.</p>
+        <img class="jupiter-image" src="jupiter1.jpg" alt="jupiter">
+        <div class="border1"></div>
+        <p1>Radius: 69,911 KM<br>
+          Number of Moons: 80-95<br>
+          Type: Gas Giant<br>
+          Distance from Sun: 741,490,000 km<br>
+          Age: 4.603 billion (years)</p1>
+          <div class="border2"></div>
+    <h4>Some Facts about Jupiter:- </h4>
+    <p2>1. Jupiter's composition is primarily gas, consisting mainly of hydrogen and helium.<br><br>
+      2. The planet's immense mass causes it to have the highest gravity among all the planets in the solar system.<br><br>
+      3. Jupiter has a complex system of rings, although they are not as prominent or well-known as Saturn's.<br><br>
+      4. The planet experiences extreme weather phenomena, including powerful storms and lightning discharges.<br><br>
+      5. Jupiter has been visited by several spacecraft, including the Galileo probe, which provided valuable data<br>
+       about the planet's atmosphere, moons, and magnetic field.</p2>
+       <div class="border3"></div>
+</div>
+</div>
+<div id="saturn-content">
+  <div class="saturn-container">
+    <h2>The Saturn</h2>
+    <p>Saturn: Spectacular rings, a celestial jewel adorned with countless icy particles, captivating the gaze of sky watchers.</p>
+    <img class="saturn-image" src="saturn1.jpg" alt="saturn">
+    <div class="border1"></div>
+    <p1>Radius: 58,232 KM<br>
+      Number of Moons: 83<br>
+      Type: Gas Giant<br>
+      Distance from Sun: 1,463,300,000 km<br>
+      Age: 4.503 billion (years)</p1>
+      <div class="border2"></div>
+  <h4>Some Facts about Saturn:- </h4>
+  <p2>1. Saturn, the second largest planet, is renowned for its breathtaking and extensive ring system composed of ice particles.<br><br>
+    2. The planet's mesmerizing rings are not solid but are made up of countless individual ringlets that orbit around Saturn.<br><br>
+    3. Saturn has more than 80 moons, with the largest one, Titan, being larger than the planet Mercury.<br><br>
+    4. The distinctive golden hue of Saturn's atmosphere is the result of its upper layers containing ammonia crystals.<br><br>
+    5. Saturn's density is so low that if there were an enormous bathtub, the planet would float in it.</p2>
+    <div class="border3"></div>
+</div>
+</div>
+<div id="uranus-content">
+  <div class="uranus-container">
+    
+    <h2>The Uranus</h2>
+    <p>Uranus: Eccentric planet with a tilted axis, icy-blue atmosphere, 
+       mysterious rings, and intriguing moons, inviting us to unravel its 
+       secrets.</p>
+       <img class="uranus-image" src="uranus1.jpg" alt="uranus">
+       <div class="border1"></div>
+       <p1>Radius: 25,362 KM<br>
+        Number of Moons: 27<br>
+        Type: Ice Giant<br>
+        Distance from Sun: 2,937,800,000 km<br>
+        Age: 4.503 billion (years)</p1>
+        <div class="border2"></div>
+  <h4>Some Facts about Uranus:- </h4>
+  <p2>1. Uranus is the only planet in our solar system that rotates on its side, with an axial tilt of about 98 degrees.<br><br>
+    2. It has a pale blue-green color due to the presence of methane gas in its atmosphere, which absorbs red light.<br><br>
+    3. Uranus has a peculiar ring system, but it is not as prominent or well-known as Saturn's.<br><br>
+    4. The planet experiences extremely long seasons, with each season lasting about 21 Earth years due to its tilted axis.<br><br>
+    5. Uranus has a set of 27 known moons, with the largest ones named after characters from the works of William Shakespeare and<br>
+     Alexander Pope.</p2>
+     <div class="border3"></div>
+</div>
+</div>
+<div id="neptune-content">
+  <div class="neptune-container">
+    <h2>The Neptune</h2>
+    <p>Neptune, the mysterious blue giant, lies farthest from the Sun. Its turbulent
+      atmosphere, icy winds, and enigmatic dark spots beguile astronomers, awaiting 
+      further exploration.</p>
+      <img class="neptune-image" src="neptune1.jpg" alt="neptune">
+      <div class="border1"></div>
+      <p1>Radius: 24,622 KM<br>
+        Number of Moons: 14<br>
+        Type: Ice Giant<br>
+        Distance from Sun: 4,473,100,000 km<br>
+        Age: 4.503 billion (years)</p1>
+        <div class="border2"></div>
+  <h4>Some Facts about Neptune:- </h4>
+  <p2>1. Neptune is the eighth and farthest planet from the Sun, shrouded in deep blue due to methane in its atmosphere.<br><br>
+    2. It possesses the strongest winds in the solar system, reaching speeds of over 1,200 miles per hour (2,000 kilometers per hour).<br><br>
+    3. Neptune has a remarkable feature called the Great Dark Spot, similar to Jupiter's Great Red Spot but eventually disappeared.<br><br>
+    4. The planet's largest moon, Triton, orbits in a retrograde direction, suggesting a captured object from the Kuiper Belt.<br><br>
+    5. Neptune radiates more energy than it receives from the Sun, indicating an internal heat source and complex atmospheric processes.</p2>
+    <div class="border3"></div>
+</div>
+</div>
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+    showMercury();
+  });
+    function showMercury() {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        planet.style.display = "none";
+      });
+      var content = document.getElementById("mercury-content");
+      content.style.display = "block";
+    }
+    
+    function showPlanet(planetId) {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        if (planet.id === planetId) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

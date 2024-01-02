@@ -1,0 +1,108 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" type="text/css" href="homepagestyles.css">
+</head>
+
+<body>
+  <div class="containerb">
+    
+    </div>
+  </div>
+  <nav>
+    
+    <ul class="navlinks">
+      <li class="active"><a href="space.html">Discover</a></li>
+      <li class="active"><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Theories</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  
+
+
+  <div class="container">
+    <h1 class="heading1">Unlock Boundless Knowledge</h1>
+    <p>
+      Discover Factoid: Factoid: Your daily source for theories and information. Stay informed, explore intriguing ideas, and expand your mind with Factoid today
+    </p>
+    <div class="containeri">
+    <img class="logo" src="logo.png">
+  </div>
+  </div>
+  <div class="containerc">
+    <h1>#FEATURES</h1>
+    <button class="button1" onclick="displayText('The Discover section of our website is a hub of knowledge and exploration. Explore space, AI, technology etc. Find captivating articles, updates, and resources tailored to your interests. Expand your horizons, stay informed, and indulge your curiosity. Start discovering today.')">Discover</button>
+  <button class="button3" onclick="displayText('The Theories section is a hub of thought-provoking ideas. Challenge your perspective, engage in intellectual exploration, and discover new connections. Dive into theories and broaden your mind today.')">Theories</button>
+  <div class="containerp">
+    <p id="displayedText"></p>
+    </div>
+    </div>
+    <div class="containerabout">
+    <h1>Unveiling the Website Developer:</h1>
+    <div class="containeraboutp">
+    <p>I'm a second-year student at Chitkara University, focusing on AI. I'm passionate about space exploration and equally drawn to web development and data analytics. Blending these interests, I'm navigating the intersection of technology, science, and creativity to shape my academic and career path.<br>To know more about me <a class="moreaboutme" target="_blank" href="https://ishaan-malhotra90.github.io/Extras/index.html">click here</a></p>
+    
+  </div>
+  </div>
+  </div>
+  <div class="containerco">
+    <div class="contact-headings">
+ 
+      <div class="contact-item">
+          <h4 class="contact-heading">Email</h4>
+          <p class="contact-info">malhotraishaan857@gmail.com</p>
+      </div>
+      <div class="contact-item">
+          <h4 class="contact-heading">Follow Me</h4>
+          <div class="follow-icons">
+            <a class="follow-icon" href="https://www.instagram.com/malhotraishaan_/"><img src="instagram.svg"></a>
+            <a class="follow-icon" href="https://github.com/Ishaan-Malhotra90"><img src="github.svg"></a>
+          </div>
+      </div>
+      
+  </div>
+  <div class="border1"></div>
+  <p class="copyright">2024@FactoidExpress All Rights Reserved</p>
+</div>
+  </div>
+  <script>
+    window.onload = function() {
+      displayText('The Discover section of our website is a hub of knowledge and exploration. Explore space, AI, technology etc. Find captivating articles, updates, and resources tailored to your interests. Expand your horizons, stay informed, and indulge your curiosity. Start discovering today.');
+    }
+  
+    function displayText(text) {
+      var displayedText = document.getElementById("displayedText");
+      displayedText.textContent = text;
+    }
+  </script>
+</body>
+
+</html>

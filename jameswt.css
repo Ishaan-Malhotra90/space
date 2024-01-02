@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Text:ital@1&family=Dosis:wght@500&family=JetBrains+Mono:ital@1&family=Lato:ital,wght@1,700&family=Lobster&family=Pacifico&family=Prompt:ital,wght@1,300&family=Roboto+Slab:wght@800&family=Roboto:ital,wght@0,300;0,700;1,400;1,700&family=Satisfy&family=Ubuntu:ital,wght@1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: black;
+  background-attachment: fixed;
+  
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-bottom: 10vh;
+  text-align: justify;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(32, 32, 32, 0.4);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255,255,255,0.025);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1000;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin-left: 4vmin;
+  margin-right: 4vmin;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4vmin;
+}
+.black-holes-container 
+{
+  display: block;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  width: 80vw;
+  height: auto;
+  color: aliceblue;
+  background-color: transparent;
+}
+.black-holes-container h
+{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  padding: 1vmin 1vmin;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #fefe6e, #77fa77);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.black-holes-container p
+{
+  position: relative;
+  top: 2vh;
+  left: 0vw;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Ubuntu', sans-serif;
+}
+.black-holes-container .iss-image
+{
+  width: 90vmin;
+  position: relative;
+  left: 20vw;
+}
+.black-holes-container .border1 {
+  position: relative;
+  top: 7vh;
+  left: -5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+}
+.black-holes-container .table-container
+{
+  position: relative;
+  top: 12vh;
+}
+.table-container li
+{
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 6vmin;
+}
+.black-holes-container .border2 {
+  position: relative;
+  top: 0vh;
+  left: -5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+}
+.black-holes-container h1
+{
+  position: relative;
+  top: 2vh;
+  left: 0vw;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #F9FBE7, #FF69B4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.black-holes-container p1
+{
+  position: relative;
+  top: 2vh;
+  left: 0vw;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Ubuntu', sans-serif;
+}
+.black-holes-container .border2 {
+  position: relative;
+  top: 18vh;
+  left: 0vw;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 20vh
+}
+.black-holes-container .border3 {
+  position: relative;
+  top: 4vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.types-container 
+{
+  display: block;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  width: 80vw;
+  height: auto;
+  color: aliceblue;
+  background-color: transparent;
+}
+.types-container h5
+{
+  position: relative;
+  top: 2vh;
+  left: 0vw;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #FFEB3B, #FF4081);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs1
+{
+  position: relative;
+  top: 4vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs1p
+{
+  position: relative;
+  top: 4vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border4 {
+  position: relative;
+  top: 7vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.types-container .rs2
+{
+  position: relative;
+  top: 0vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs2p
+{
+  position: relative;
+  top: 0vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border5 {
+  position: relative;
+  top: 3vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.types-container .rs3
+{
+  position: relative;
+  top: -3vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs3p
+{
+  position: relative;
+  top: -3vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border6 {
+  position: relative;
+  top: 1vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.types-container .rs4
+{
+  position: relative;
+  top: -5vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs4p
+{
+  position: relative;
+  top: -5vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border7 {
+  position: relative;
+  top: -1vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.types-container .rs5
+{
+  position: relative;
+  top: -8vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs5p
+{
+  position: relative;
+  top: -8vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border8 {
+  position: relative;
+  top: -4vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.types-container .rs6
+{
+  position: relative;
+  top: -10vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs6p
+{
+  position: relative;
+  top: -10vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border9
+ {
+  position: relative;
+  top: -6vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.types-container .rs7
+{
+  position: relative;
+  top: -12vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs7p
+{
+  position: relative;
+  top: -12vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border10
+ {
+  position: relative;
+  top: -8vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 5vh;
+}
+.types-container .rs8
+{
+  position: relative;
+  top: -10vh;
+  font-size: 5vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .rs8p
+{
+  position: relative;
+  top: -10vh;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container .border11
+ {
+  position: relative;
+  top: -6vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 5vh;
+}
+.menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    color: aliceblue;
+  }
+ 
+@media (max-width: 1025px)
+{nav
+  {
+    padding: 0%;
+    position: fixed; 
+     justify-content: center;
+     border-bottom-right-radius: 50%;
+  }
+  nav ul
+  {
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 40vh;
+    margin-top: -2000px;
+    transition: all 0.5s ease;
+    z-index: 2;
+   
+  }
+  nav li
+  {
+    margin: 30px auto;
+  }
+  .mobile-menu
+  {
+    margin-top: 0px;
+    border-bottom-right-radius: 30%;
+  }
+  .menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: block;
+    z-index: 3;
+  }
+  .black-holes-container
+  {
+    top: 10vh;
+  }
+  .black-holes-container .iss-image
+  {
+    left: -7vw;
+  }
+  table {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 80vh;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 5px;
+    text-align: left;
+    color: white;
+    border: 1px solid #ddd;
+    font-size: 4vmin;
+    white-space: nowrap;
+  }
+  
+  th {
+    background-color: transparent;
+    text-align: center;
+  }
+}
+

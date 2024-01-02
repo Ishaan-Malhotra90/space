@@ -1,0 +1,928 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Text:ital@1&family=Dosis:wght@500&family=JetBrains+Mono:ital@1&family=Lato:ital,wght@1,700&family=Lobster&family=Pacifico&family=Prompt:ital,wght@1,300&family=Roboto+Slab:wght@800&family=Roboto:ital,wght@0,300;0,700;1,400;1,700&family=Satisfy&family=Ubuntu:ital,wght@1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: black;
+  background-attachment: fixed;
+  
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-bottom: 10vh;
+  text-align: justify;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(32, 32, 32, 0.4);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255,255,255,0.025);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1000;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin-left: 4vmin;
+  margin-right: 4vmin;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4vmin;
+} 
+.mercury-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.mercury-container .mh
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.mercury-container .mp
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.mercury-container .mercury-image {
+  display: block;
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 25vw;
+}
+.mercury-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.mercury-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+
+.mercury-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.mercury-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.mercury-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.mercury-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+.venus-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.venus-container h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.venus-container p
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.venus-container .venus-image {
+  display: block;
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 25vw;
+}
+.venus-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.venus-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+
+.venus-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.venus-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.venus-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.venus-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+.earth-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.earth-container h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.earth-container p
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.earth-container .earth-image {
+  display: block;
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 25vw;
+}
+.earth-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.earth-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+
+.earth-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.earth-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.earth-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.earth-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+.mars-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.mars-container h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.mars-container p
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.mars-container .mars-image {
+  display: block;
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 10vw;
+}
+.mars-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.mars-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+
+.mars-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.mars-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.mars-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.mars-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+.jupiter-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.jupiter-container h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.jupiter-container p
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.jupiter-container .jupiter-image {
+  display: block;
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 20vw;
+}
+.jupiter-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.jupiter-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+.jupiter-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.jupiter-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.jupiter-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.jupiter-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+.saturn-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.saturn-container h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.saturn-container p
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.saturn-container .saturn-image {
+  display: block;
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 20vw;
+}
+.saturn-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.saturn-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+.saturn-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.saturn-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.saturn-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.saturn-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+.uranus-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+.uranus-container h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.uranus-container p
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.uranus-container .uranus-image {
+  display: block;
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 25vw;
+}
+.uranus-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.uranus-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+.uranus-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.uranus-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.uranus-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.uranus-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+.neptune-container {
+  display: inline-block;
+  width: 85vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 0vw;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.neptune-container h2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 6vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.neptune-container p
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+.neptune-container .neptune-image {
+  display: block;
+  width: 50vw;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: 25vw;
+}
+.neptune-container .border1 {
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.neptune-container p1
+{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 4vh;
+}
+.neptune-container .border2 {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+.neptune-container h4
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 5vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.neptune-container p2
+{
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 4vmin;
+  color: white;
+  position: relative;
+  left: 10vw;
+  top: 0vh;
+}
+.neptune-container .border3 {
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  width: 90vw;
+  height: 0.1vh;
+  background-color: white;
+  margin-bottom: 10vh;
+  z-index: 1;
+ 
+}
+
+.menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    color: aliceblue;
+  }
+ 
+@media (max-width: 1025px)
+{
+  nav
+  {
+    padding: 0%;
+    position: fixed; 
+     justify-content: center;
+     border-bottom-right-radius: 50%;
+  }
+  nav ul
+  {
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 70vh;
+    margin-top: -2000px;
+    transition: all 0.5s ease;
+    z-index: 2;
+   
+  }
+  nav li
+  {
+    margin: 10px auto;
+  }
+  .mobile-menu
+  {
+    margin-top: 0px;
+    border-bottom-right-radius: 30%;
+  }
+  .menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: block;
+    z-index: 3;
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="spacestyles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Theories</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+    
+    <div class="container">
+    <h>#Beyond Our Wildest Imaginations: What Exactly is Space?</h>
+    <p>Space refers to the vast expanse that exists beyond Earth's atmosphere. It encompasses 
+      everything in the universe, including galaxies, stars, planets, moons, asteroids, comets, 
+      and various other celestial objects. Space is characterized by its immense distances, cosmic
+        phenomena, and the absence of air or atmospheric conditions. It serves as the stage for 
+      cosmic events, stellar evolution, and the expansion of the universe. Exploring space allows 
+      us to unravel the mysteries of the cosmos and gain insights into the fundamental nature of 
+      existence.
+    </p>
+    <div class="border1"></div>
+    <h1>#DESTINATIONS</h1>
+    <ul class="table">
+      <li class="links" style="--accent-color:#5b719f">
+        <div class="date">ISRO</div>
+        <div class="descr">The Indian Space Research Organisation (ISRO) is the space agency of the Government of India, known for its significant contributions to space exploration and satellite technology, fostering national development through space research and applications.</div>
+        <div class="title"><a type="button" class="simple" href="isro.html">Explore</a></div>
+    </li>
+      <li class="links" style="--accent-color:#5b719f">
+          <div class="date">Solar System</div>
+          <div class="descr">The solar system is our Sun and eight planets, each with distinct characteristics, orbiting around it.</div>
+          <div class="title"><a type="button" class="simple" href="solar-system.html">Explore</a></div>
+      </li>
+      <li class="links" style="--accent-color:#5b719f">
+          <div class="date">Black Holes</div>
+          <div class="descr">Collapsed stars with powerful gravity, trapping everything, even light. They reveal the mysteries of gravity and space.</div>
+          <div class="title"><a type="button" class="simple" href="black-holes.html">Explore</a></div>
+      </li>
+      <li class="links" style="--accent-color:#5b719f">
+          <div class="date">International Space Station</div>
+          <div class="descr">A collaborative, habitable space station where astronauts from different countries live and conduct scientific research in space.</div>
+          <div class="title"><a type="button" class="simple" href="iss.html">Explore</a></div>
+      </li>
+      <li class="links" style="--accent-color:#5b719f">
+          <div class="date">James Webb Telescope</div>
+          <div class="descr">A powerful observatory that studies the universe in infrared light, aiming to uncover the origins of galaxies, stars, and planets.</div>
+          <div class="title"><a type="button" class="simple" href="jameswt.html">Explore</a></div>
+        </li>
+      <li class="links" style="--accent-color:#5b719f">
+          <div class="date">Exo Planets</div>
+          <div class="descr">Exoplanets are planets outside our solar system. They offer insights into planetary diversity, habitability, and the possibility of life beyond Earth.</div>
+              <div class="title"> <a type="button" class="simple" href="exoplanets.html">Explore</a></div>
+      </li>
+      <li class="links" style="--accent-color:#5b719f">
+          <div class="date">Humans & Space</div>
+          <div class="descr">Human space exploration expands our knowledge of the universe, fosters technological advancement, and inspires future generations.</div>
+          <div class="title"><a type="button" class="simple" href="humanspace.html">Explore</a></div>
+      </li>
+  </ul>  
+    <div class="border2"></div>
+      </div>
+
+    
+</body>
+</html>

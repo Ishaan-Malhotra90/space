@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="exoplanets.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="showpegasib()">51 Pegasi b</a></li>
+      <li><a href="#" onclick="showtopic('barnardstarb-content')">Barnard's Star b</a></li>
+      <li><a href="#" onclick="showtopic('trappist-content')">TRAPPIST-1 e</a></li>
+      <li><a href="#" onclick="showtopic('kepler-content')">Kepler-1655 b</a></li>
+      <li><a href="space.html">Destination</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+    </nav>
+    <script>
+      const menubtn = document.querySelector('.menu-btn');
+      const navlinks = document.querySelector('.navlinks');
+      const body = document.querySelector('body');
+    
+      menubtn.addEventListener('click', () => {
+        navlinks.classList.toggle('mobile-menu');
+      });
+    
+      body.addEventListener('click', (event) => {
+        // Check if the click happened outside the navbar or on a link within the navbar
+        if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+          navlinks.classList.remove('mobile-menu');
+        }
+      });
+    
+      // Add click event listener to all anchor tags within the navbar
+      const navLinks = document.querySelectorAll('.navlinks a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          // Close the mobile menu when a link is clicked
+          navlinks.classList.remove('mobile-menu');
+        });
+      });
+    </script>
+  <div id="pegasib-content">
+    <div class="pegasib-container">
+      <h2 class="p1">51 Pegasi b</h2>
+      <p class="p1p">51 Pegasi b is an exoplanet located in the constellation Pegasus,
+        known for being the first planet discovered orbiting a Sun-like star.</p>
+         <img class="pegasib-image" src="51pegasi.png" alt="Mercury">
+         <div class="border1"></div>
+         <p1>Radius: 1.27 X (Jupiter)<br>
+          Discovery: 1995<br>
+          Type: Gas Giant<br>
+          Mass: 0.46 Jupiter<br>
+          Detection Method: Radial Velocity<br>
+          Orbital Period: 4.2 Days</p1>
+          <div class="border2"></div> 
+    <h4>More about 51 Pegasi b:- </h4>
+    <p2>1. 51 Pegasi b is a hot Jupiter exoplanet located approximately 50 light-years away.<br><br>
+      2. It was the first exoplanet discovered orbiting a Sun-like star in 1995.<br><br>
+      3. This gas giant orbits its host star at a distance closer than Mercury's orbit around the Sun.<br><br>
+      4. 51 Pegasi b is about half the mass of Jupiter but significantly hotter due to its close proximity to its star.<br><br></p2>
+      <div class="border3"></div> 
+</div>
+</div>
+<div id="barnardstarb-content">
+    <div class="barnardstarb-container">
+      <h2 class="p1">Barnard's Star b</h2>
+      <p class="p1p"> Barnard's Star b: A nearby super-Earth orbiting Barnard's Star, 
+        the fourth-closest known star to the Sun.</p>
+         <img class="barnardstarb-image" src="barnardstar1.jpg" alt="Mercury">
+         <div class="border1"></div>
+         <p1>Radius: 8703.4 KM<br>
+          Discovery: 2018<br>
+          Type: Super-Earth<br>
+          Mass: 3.2 Earth<br>
+          Detection Method: Radial Velocity<br>
+          Orbital Period: 233 Days</p1>
+          <div class="border2"></div> 
+    <h4>More about Barnard's Star b:-</h4>
+    <p2>1. A potentially rocky exoplanet with a surface temperature of -170 degrees Celsius.<br><br>
+      2.The exoplanet resides in the habitable zone of its star but lacks the necessary conditions for life.<br><br>
+      3. It is believed to be a frozen world with a surface covered in ice and a thin atmosphere.</p2>
+      <div class="border3"></div> 
+    </div>
+    </div>
+    <div id="trappist-content">
+        <div class="trappist-container">
+          <h2 class="p1">TRAPPIST-1 e</h2>
+      <p class="p1p">Trappist-1 e: A potentially habitable Earth-sized exoplanet
+        in the TRAPPIST-1 system, located 39 light-years away.</p>
+         <img class="trappist-image" src="trappist1.jpg" alt="Mercury">
+         <div class="border1"></div>
+         <p1>Radius: 0.92 Earth<br>
+          Discovery: 2017<br>
+          Type: Terrestrial<br>
+          Mass: 0.692 Earth<br>
+          Detection Method: Transist<br>
+          Orbital Period: 6.1 Days</p1>
+          <div class="border2"></div> 
+    <h4>More about Trappist-1 e:-</h4>
+    <p2>1. Its surface is believed to be a mix of rocky terrain and vast oceans, harboring the possibility of liquid water.<br><br>
+      2. This intriguing exoplanet is part of a remarkable system hosting seven Earth-sized planets, a rare cosmic occurrence.<br><br>
+      3. With a year lasting only 6.1 Earth days, its proximity to its star results in extreme temperature variations.<br><br> 
+      4. The planet's location within the habitable zone increases the chances for the existence of potential life forms.</p2>
+      <div class="border3"></div> 
+    </div>
+    </div>
+        <div id="kepler-content">
+            <div class="kepler-container">
+              <h2 class="p1">Kepler-1655 b</h2>
+              <p class="p1p">Kepler-1655 b is a Neptune-like exoplanet that orbits an F-type star.</p>
+                 <img class="kepler-image" src="kepler1.jpg" alt="Mercury">
+                 <div class="border1"></div>
+                 <p1>Radius: 2.213 Earth<br>
+                  Discovery: 2018<br>
+                  Type: Terrestrial<br>
+                  Mass: 5.4 Earth<br>
+                  Detection Method: Transist<br>
+                  Orbital Period: 11.9 Days</p1>
+                  <div class="border2"></div> 
+            <h4>More about Kepler-1655 b:-</h4>
+            <p2>1. A planet with a mysterious, ever-changing atmosphere, creating mesmerizing celestial light shows.<br><br>
+              2. Despite its enormous size, it has an incredibly low density, defying conventional planetary compositions.<br><br>
+              3. An enigmatic planet exhibiting unusual gravitational interactions, challenging our understanding of celestial dynamics.<br><br> 
+              4. A world of extremes, with temperatures swinging from scorching hot to bone-chilling cold within hours.</p2>
+              <div class="border3"></div> 
+            </div>
+            </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+    showpegasib();
+  });
+    function showpegasib() {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        planet.style.display = "none";
+      });
+      var content = document.getElementById("pegasib-content");
+      content.style.display = "block";
+    }
+    
+    function showtopic(planetId) {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        if (planet.id === planetId) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    }
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Text:ital@1&family=Dosis:wght@500&family=JetBrains+Mono:ital@1&family=Lato:ital,wght@1,700&family=Lobster&family=Pacifico&family=Prompt:ital,wght@1,300&family=Roboto+Slab:wght@800&family=Roboto:ital,wght@0,300;0,700;1,400;1,700&family=Satisfy&family=Ubuntu:ital,wght@1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: black;
+  background-attachment: fixed;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-bottom: 10vh;
+  text-align: justify;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(32, 32, 32, 0.4);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255,255,255,0.025);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1000;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin-left: 4vmin;
+  margin-right: 4vmin;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4vmin;
+}
+.black-holes-container 
+{
+  display: block;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  width: 80vw;
+  color: aliceblue;
+  background-color: transparent;
+}
+.black-holes-container h
+{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  padding: 1vmin 1vmin;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #3498db, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.black-holes-container p
+{
+  position: relative;
+  top: 2vh;
+  left: 0vw;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.border1 {
+  position: relative;
+  top: 7vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+}
+.types-container 
+{
+  display: block;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  width: 80vw;
+  height: auto;
+  color: aliceblue;
+  background-color: transparent;
+}
+.types-container h2
+{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #ffed75, #ff9a8b, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.types-container p
+{
+  position: relative;
+  top: 2vh;
+  left: 0vw;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.border2 {
+  position: relative;
+  top: 7vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+}
+
+.launchpads-container 
+{
+  display: block;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  width: 80vw;
+  height: auto;
+  color: aliceblue;
+  background-color: transparent;
+}
+.launchpads-container h3
+{
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  font-size: 5vmin;
+  background: linear-gradient(90deg, #ffed75, #ff9a8b, #e0d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.launchpads-container p
+{
+  position: relative;
+  top: 2vh;
+  left: 0vw;
+  font-size: 4vmin;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.border3 {
+  position: relative;
+  top: 7vh;
+  width: 80vw;
+  height: 0.1vh;
+  background-color: white;
+  z-index: 1;
+}
+.menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    color: aliceblue;
+  }
+  
+.timeline {
+	position: relative;
+	max-width: 100vw;
+	margin: 0 auto;
+	padding: 30vh 2vmin 2vmin 2vmin;
+}
+
+.timeline::before {
+	content: "";
+	position: fixed;
+	width: 100vw;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background: linear-gradient(180deg, #fff0, #000 22vh 100vh);
+	height: 33vh;
+}
+
+.timeline::after {
+	content: "";
+	position: absolute;
+	width: 0.5vmin;
+	background: linear-gradient(
+		180deg,
+		black 0 47vh,
+		orange 0 296vh,
+		#0f760f 0 663vh,
+		#196099 0 751vh,
+		#fff 0 100%
+	);
+	background: #fff;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -0.25vmin;
+	z-index: -1;
+}
+
+.timeline li {
+	text-align: right;
+	background: black;
+	list-style-type: none;
+	padding: 0 4vmin 0 0;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+	perspective: 30vmin;
+	perspective-origin: bottom;
+}
+
+.timeline li:nth-child(even) {
+	text-align: left;
+	left: 50%;
+	padding: 0 0 0 4vmin;
+}
+
+.timeline li:before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 1vmin;
+	width: 0;
+	z-index: 1;
+	right: 3vmin;
+	border: medium solid #fff;
+	border-width: 1vmin 0 1vmin 1vmin;
+	border-color: #fff0 #fff0 #fff0 #fff;
+}
+
+.timeline li:nth-child(even):before {
+	border-color: #fff0 #fff #fff0 #fff0;
+	border-width: 1vmin 1vmin 1vmin 0;
+	right: inherit;
+	left: 3vmin;
+}
+
+.timeline li:nth-child(even):after {
+	left: -2.25vmin;
+}
+
+.timeline li > * {
+	width: 100%;
+	display: inline-block;
+	padding: 0.5vmin;
+}
+
+.timeline li h2 {
+	position: absolute;
+	top: -40vh;
+	margin: 0;
+	left: 0;
+}
+
+.timeline li time {
+	background: white;
+	float: right;
+	width: auto;
+	font-size: 3vmin;
+	border-radius: 0.25vmin;
+}
+
+.timeline li:nth-child(even) time {
+	float: left;
+}
+
+.timeline li time span {
+	font-size: 1.5vmin;
+	line-height: 0.25vmin;
+	top: -1vmin;
+	position: relative;
+	margin-left: 0.5vmin;
+	color: #666;
+}
+
+.timeline li time span em {
+	font-size: 1.1vmin;
+	text-transform: uppercase;
+	font-style: normal;
+	color: #999;
+	float: right;
+}
+
+.timeline li time strong {
+	font-weight: normal;
+	color: black;
+}
+
+.timeline li > strong {
+	color: white;
+	font-weight: 300;
+	padding: 0.25vmin 0;
+}
+
+.timeline li > strong span {
+	float: right;
+	background: #d28b3c;
+	padding: 0.5vmin 1vmin;
+	border-radius: 0.25vmin;
+	font-size:3vmin;
+	letter-spacing: 0.025vmin;
+}
+
+.timeline li:nth-child(even) > strong span {
+	float: left;
+}
+.timeline li > span {
+	overflow: hidden;
+	transition: all 0.5s ease 0s;
+	background:#8cb6e4;
+	right: 2vmin;
+	margin-top: -0.5vmin;
+	width: auto;
+	color: #fff;
+	border-radius: 0.25vmin;
+	display: inline-grid;
+	font-weight: 100;
+	letter-spacing: 0.1vmin;
+}
+
+.timeline li:nth-child(even) > span {
+	right: initial;
+	left: 2vmin;
+	transform-origin: left top;
+}
+
+.timeline li:last-of-type {
+	margin-bottom: 45vmin;
+}
+
+.timeline li > span:before {
+	content: "";
+	float: right;
+	width: 50vmin;
+	height: 40vmin;
+	background: #fff;
+	background-size: cover;
+	background-position: center;
+}
+
+.timeline li:nth-child(1) > span:before {
+	background-image: url('isro.png');
+}
+
+.timeline li:nth-child(2) > span:before {
+	background-image: url('terls.jpg');
+}
+
+.timeline li:nth-child(3) > span:before {
+	background-image: url('rohini.jpg');
+}
+
+.timeline li:nth-child(4) > span:before {
+	background-image: url('aryabhata.jpg');
+	background-position: center 70%;
+}
+
+.timeline li:nth-child(5) > span:before {
+	background-image: url('slv3.jpg');
+	background-position: center 85%;
+}
+
+.timeline li:nth-child(6) > span:before {
+	background-image: url('pslv.png');
+}
+
+.timeline li:nth-child(7) > span:before {
+	background-image: url('insat1a.webp');
+}
+
+.timeline li:nth-child(8) > span:before {
+	background-image: url('irs.jpeg');
+}
+
+.timeline li:nth-child(9) > span:before {
+	background-image: url('gslv.jpg');
+}
+
+.timeline li:nth-child(10) > span:before {
+	background-image: url('insat3c.gif');
+}
+
+.timeline li:nth-child(11) > span:before {
+	background-image: url('chandrayaan1.jpg');
+	background-position: center 50%;
+	background-size: 110%;
+}
+
+.timeline li:nth-child(12) > span:before {
+	background-image: url('mangalyaan.jpg');
+	background-position: center top;
+}
+
+.timeline li:nth-child(13) > span:before {
+	background-image: url('pslvc37.jpg');
+}
+
+.timeline li:nth-child(14) > span:before {
+	background-image: url('chandrayaan2.jpg');
+	background-position: center 75%;
+}
+
+.timeline li:nth-child(15) > span:before {
+	background-image: url('gaganyaan.jpeg');
+	background-position: center top;
+}
+
+.timeline li:nth-child(16) > span:before {
+	background-image: url('chandrayaan3.avif');
+}
+
+.timeline li > span:after {
+	content: "";
+	width: 50vmin;
+	text-shadow: 0 0 1px #000, 0 0 1px #000;
+	font-size: 4vmin;
+  text-align: center;
+}
+
+.timeline li:nth-child(1) > span:after {
+	content: "Indian National Committee for Space Research (INCOSPAR) established, laying the groundwork for ISRO.";
+}
+
+.timeline li:nth-child(2) > span:after {
+	content: "Thumba Equatorial Rocket Launching Station (TERLS) set up in Kerala, marking the beginning of space research activities.";
+}
+
+.timeline li:nth-child(3) > span:after {
+	content: "1965: First Indian-made rocket, Rohini-I, successfully launched.";
+}
+
+.timeline li:nth-child(4) > span:after {
+	content: "Aryabhatta, India's first satellite, launched from Soviet Union, marking the country's entry into the space age.";
+}
+
+.timeline li:nth-child(5) > span:after {
+	content: "Satellite Launch Vehicle (SLV-3), India's first satellite launch vehicle, successfully tested.";
+}
+
+.timeline li:nth-child(6) > span:after {
+	content: "PSLV (Polar Satellite Launch Vehicle) program initiated, aimed at launching satellites into polar orbits.";
+}
+
+.timeline li:nth-child(7) > span:after {
+	content: "INSAT-1A, India's first communication satellite, launched, revolutionizing telecommunication and broadcasting.";
+}
+
+.timeline li:nth-child(8) > span:after {
+	content: "Remote Sensing Satellite (IRS) program launched, providing valuable data for resource management and disaster prediction.";
+}
+
+.timeline li:nth-child(9) > span:after {
+	content: "GSLV (Geosynchronous Satellite Launch Vehicle) program initiated, aimed at launching satellites into geostationary orbits.";
+}
+
+.timeline li:nth-child(10) > span:after {
+	content: "INSAT-3C, India's first satellite with Internet capability, launched, boosting the country's digital infrastructure.";
+}
+
+.timeline li:nth-child(11) > span:after {
+	content: "Chandrayaan-1, India's first lunar mission, launched, successfully orbiting the moon and sending back valuable scientific data.";
+}
+
+.timeline li:nth-child(12) > span:after {
+	content: "Mars Orbiter Mission (Mangalyaan), India's first mission to Mars, successfully enters Martian orbit, making India the first Asian nation to achieve this feat.";
+}
+
+.timeline li:nth-child(13) > span:after {
+	content: "PSLV sets a record by launching 104 satellites in a single flight, showcasing its launch capacity and cost-effectiveness.";
+}
+
+.timeline li:nth-child(14) > span:after {
+	content: "Chandrayaan-2, India's second lunar mission, successfully orbits the moon but faces challenges with the lander Vikram.";
+}
+
+.timeline li:nth-child(15) > span:after {
+	content: "Gaganyaan program, India's first human spaceflight mission, announced, aiming to send astronauts into space by 2024.";
+}
+
+.timeline li:nth-child(16) > span:after {
+	content: "Successful launch and landing of Chandrayaan-3, marking another attempt to land a rover on the moon.";
+}
+
+.selector {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 10vmin;
+	background: linear-gradient(180deg, #fff0 0 32%, #fff8 0 34%, #fff0 0 100%);
+	z-index: 3;
+	padding-top: 6vmin;
+}
+
+.selector a {
+	opacity: 1;
+	position: absolute;
+	margin: 1px;
+	left: 0;
+	text-decoration: none;
+	background: white;
+	padding: 0.15vmin 0.25vmin 0.1vmin;
+	min-width: 2vw;
+	display: inline-block;
+	color: black;
+	border-left: 1px solid #000;
+	font-size: 1.65vmin;
+}
+
+.selector a:before {
+	content: "";
+	width: 2.5vmin;
+	height: 2.5vmin;
+	position: absolute;
+	top: -4vmin;
+	background-color: white;
+	background-size: contain;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 1vmin 0 #000;
+	border-radius: 100%;
+}
+
+.selector a:after {
+	content: "";
+	margin-left: 0.25vmin;
+	font-size: 1.5vmin;
+	position: absolute;
+	border: 0.75vmin solid transparent;
+	border-bottom-color: #fff;
+	top: -1.5vmin;
+	left: 0.5vmin;
+}
+
+.selector a span {
+	font-size: 1.25vmin;
+	color: #333;
+	margin-left: 0.25vmin;
+}
+
+
+a[href="#birth"] {
+	left: 1vw;
+}
+a[href="#know"] {
+	left: 5vw;
+}
+a[href="#photosynthesis"] {
+	left: 13vw;
+}
+a[href="#multicellular"] {
+	left: 19vw;
+}
+
+a[href="#plants"] {
+	left: 24vw;
+}
+a[href="#animals"] {
+	left: 32vw;
+}
+a[href="#ediacaran"] {
+	left: 38vw;
+}
+a[href="#cambrian"] {
+	left: 42vw;
+}
+
+a[href="#tetrapods"] {
+	left: 46vw;
+}
+a[href="#dinosaurus"] {
+	left: 60vw;
+}
+a[href="#mammals"] {
+	left: 65vw;
+}
+a[href="#primates"] {
+	left: 74vw;
+}
+
+a[href="#apes"] {
+	left: 80vw;
+}
+a[href="#hominini"] {
+	left: 86vw;
+}
+a[href="#australopithecus"] {
+	left: 92vw;
+}
+a[href="#habilis"] {
+	left: 96vw;
+}
+
+.selector a strong {
+	background: #1c1c1c;
+	color: white;
+	position: absolute;
+	top: 9vmin;
+	font-weight: 300;
+	padding: 0.5vmin 0.75vmin;
+	width: max-content;
+	border-radius: 0.25vmin;
+	left: 0;
+	transition: top 0.1s ease 0s;
+	z-index: -1;
+}
+
+a:hover strong {
+	top: -9vmin;
+	transition: top 0.5s ease 0s;
+}
+
+a strong:before {
+	content: "";
+	border: 0.85vmin solid #fff0;
+	border-top-color: #1c1c1c;
+	position: absolute;
+	bottom: -1.7vmin;
+}
+
+.timeline li:nth-child(2) {
+	margin-top: 40vh;
+}
+.timeline li:nth-child(3) {
+	margin-top: 13vh;
+}
+.timeline li:nth-child(4) {
+	margin-top: 62vh;
+}
+.timeline li:nth-child(5) {
+	margin-top: 30vh;
+}
+.timeline li:nth-child(6) {
+	margin-top: 9vh;
+}
+.timeline li:nth-child(7) {
+	margin-top: 19vh;
+}
+.timeline li:nth-child(8) {
+	margin-top: 8vh;
+}
+.timeline li:nth-child(9) {
+	margin-top: 25vh;
+}
+.timeline li:nth-child(10) {
+	margin-top: 9vh;
+}
+.timeline li:nth-child(11) {
+	margin-top: 2vh;
+}
+.timeline li:nth-child(12) {
+	margin-top: 22vh;
+}
+.timeline li:nth-child(13) {
+	margin-top: 3vh;
+}
+.timeline li:nth-child(14) {
+	margin-top: 8vh;
+}
+.timeline li:nth-child(15) {
+	margin-top: 4vh;
+}
+.timeline li:nth-child(16) {
+	margin-top: 5vh;
+}
+@media (max-width: 1025px)
+{
+  nav
+  {
+    padding: 0%;
+    position: fixed; 
+     justify-content: center;
+     border-bottom-right-radius: 50%;
+  }
+  nav ul
+  {
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 50vh;
+    margin-top: -2000px;
+    transition: all 0.5s ease;
+    z-index: 2;
+   
+  }
+  nav li
+  {
+    margin: 30px auto;
+  }
+  .mobile-menu
+  {
+    margin-top: 0px;
+    border-bottom-right-radius: 30%;
+  }
+  .menu-btn
+  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: block;
+    z-index: 3;
+  }
+  .black-holes-container
+  {
+    top: 12vh;
+  }
+  .selector
+  {
+	display: none;
+  }
+  .timeline
+  {
+	left: 25vw;
+  }
+  .timeline::after {
+	left: 2vw;
+}
+  .timeline li {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 0 2vmin;
+  }
+
+  .timeline li:nth-child(even) {
+    left: 2vw;
+    padding: 0 2vmin 0 0;
+  }
+
+  .timeline li h2 {
+    top: -2vmin; 
+  }
+
+  .timeline li:last-of-type {
+    margin-bottom: 20vmin; 
+  }
+  .timeline li time
+  {
+	float: left;
+  }
+  .timeline li time:before
+  {
+	float: left;
+  }
+  .timeline li:before {
+	display: none;
+}
+  .timeline li >strong span
+  {
+	float: left;
+  }
+}
+

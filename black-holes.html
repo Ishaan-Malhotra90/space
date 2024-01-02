@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="black-holes.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="showBlackholes()">Black Holes</a></li>
+      <li><a href="#" onclick="showtopic('types-content')">Types Of Black Holes</a></li>
+      <li><a href="space.html">Destination</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="black-holes-content">
+    <div class="black-holes-container">
+      <h>#Journey into the Abyss: Unraveling the Mysteries of Black Holes</h>
+      <p>A black hole is a region of space characterized by an incredibly strong gravitational field from which nothing,
+         including light, can escape. It is formed through the gravitational collapse of massive stars, resulting in a
+          singularity—a point of infinite density and zero volume—surrounded by an event horizon, beyond which no information 
+          or particles can be detected from the outside. Black holes exhibit immense gravitational forces that warp the fabric
+           of spacetime, profoundly influencing the surrounding matter and shaping the structure of the universe.</p>
+      <div class="border1"></div>
+        <h1>#Beyond the Event Horizon: An Expedition into the Enigmatic Realm of Black Holes!</h1>
+        <p1>Singularity: A singularity is a point of infinite density and zero volume that exists at the center of a black hole.
+           It is a region where the laws of physics as we currently understand them break down. The singularity is thought to be 
+           a result of the complete collapse of matter under the extreme gravitational forces within a black hole.<br><br>
+
+          Event Horizon: The event horizon is the boundary of a black hole, beyond which nothing can escape, not even light. It 
+          marks the point of no return, where the gravitational pull of the black hole is so strong that once crossed, escape
+           becomes impossible. Anything that enters the event horizon is destined to fall into the singularity at the center.<br><br>
+          
+          Photon Sphere: The photon sphere is a region around a black hole where photons (particles of light) can form stable orbits. 
+          In this region, photons move in nearly circular paths, closely following the curvature of spacetime. These photons can be
+           observed by distant observers as a ring of light encircling the black hole.<br><br>
+          
+          Relativistic Jets: Relativistic jets are highly energetic and narrow streams of particles that are often observed emanating 
+          from the vicinity of black holes. These jets extend outward from the black hole's accretion disk (discussed next) and can span 
+          vast distances across space. The exact mechanisms that give rise to these jets are not yet fully understood, but they are
+           believed to result from the interaction of powerful magnetic fields and the rotation of the black hole.<br><br>
+          
+          Innermost Stable Orbit (ISCO): The innermost stable orbit, also known as the innermost circular orbit, refers to the closest 
+          distance at which an object can stably orbit a black hole without falling into it. This distance depends on the mass and spin
+           of the black hole. Any object orbiting closer than the ISCO will inevitably plunge into the black hole due to the overwhelming
+            gravitational forces.<br><br>
+          
+          Accretion Disk: An accretion disk is a structure of matter that forms around a black hole or any other massive object with a strong
+           gravitational pull. It consists of gas, dust, and other particles that are gradually drawn towards the black hole due to its immense
+            gravity. As this material falls into the black hole, it forms a disk-like structure that gets heated to extremely high temperatures,
+             emitting intense radiation across the electromagnetic spectrum. The accretion disk plays a significant role in the observational 
+             characteristics of black holes.</p1>
+          <div class="border2"></div>
+      </div>
+      </div>
+      <div id="types-content">
+        <div class="types-container">
+          <h2 class="miniature">Miniature Black Holes</h2>
+          <p class="miniaturepara">
+            Miniature black holes, if real, are incredibly compact and exhibit powerful gravitational forces. Their formation 
+            and properties continue to be a subject of scientific inquiry and theoretical exploration.<br><br>
+            1. Mass: Masses ranging from subatomic scales to several times the mass of the Moon.<br><br>
+            2. Formation: During the early universe or as remnants of the Big Bang through high-energy particle collisions.<br><br>
+            3. Size: Extremely small and incredibly dense, with their size and density determined by their mass.<br><br>
+            4. Accretion & Activity: Exhibit mass-dependent behavior and observational characteristics, with potential for 
+            accretion and activity..<br><br>
+            5. Cosmological Role: Could have significant implications for our understanding of the fundamental laws of physics, such as
+             quantum gravity and the behavior of matter under extreme conditions.</p>
+              <div class="border2"></div>
+              <h2 class="stellar">Stellar Black Holes</h2>
+              <p class="stellarpara">
+                Stellar black holes are remnants of massive stars that collapsed under their own gravity, forming incredibly dense objects with  
+                powerful gravitational forces.<br><br>
+                1. Mass: They typically have a mass range of a few times that of the Sun (up to 20-30 solar masses).<br><br>
+                2. Formation: Formed through the gravitational collapse of massive stars at the end of their life cycle.<br><br>
+                3. Size: relatively small, with a radius of a few kilometers<br><br>
+                4. Accretion & Activity: an actively accrete matter from their surroundings, generating X-ray emissions and jets of high-energy particles.<br><br>
+                5. Cosmological Role: They play a crucial role in the evolution of galaxies, as their formation and interactions
+                 with matter contribute to the enrichment of heavy elements and can influence the dynamics of stellar populations.</p>
+                <div class="border3"></div>
+                <h2 class="intermediate">Intermediate Black Holes</h2>
+                <p class="intermediatepara">Intermediate black holes bridge the gap between stellar and supermassive black holes, 
+                  shedding lighton the cosmic processes that shape galaxies.<br><br>
+                  1. Mass: Masses ranging from a few hundred to a few hundred thousand times that of the Sun.<br><br>
+                  2. Formation: Formed through mergers or direct collapse, playing a role in unraveling the mysteries of galactic evolution.<br><br>
+                  3. Size: Range in size from thousands to millions of times the mass of our Sun.<br><br>
+                  4. Accretion & Activity: Similar to stellar black holes, intermediate black holes can also accrete matter, but their accretion
+                   rates and activity may vary depending on their environment and available sources of material. make it short<br><br>
+                  5. Cosmological Role:  Intermediate black holes are still under study, but their existence could provide insights into the
+                   formation and growth of supermassive black holes, as they might be the building blocks or intermediaries in the process.</p>
+                   <div class="border4"></div>
+                   <h2 class="supermassive">Supermassive Black Holes</h2>
+                   <p class="supermassivepara">Supermassive black holes at galactic centers shape
+                    cosmic evolution through gravitational pull, mass
+                    accretion, and mergers.<br><br>
+                    1. Mass: Largest type of black holes, with masses millions to billions of times greater than the Sun.<br><br>
+                    2. Formation: Formed  through prolonged mass accretion or mergers, but their exact origin remains unconfirmed.<br><br>
+                    3. Size: Ranging from millions to billions of kilometers, and have lower density than stellar black holes.<br><br>
+                    4. Accretion & Activity: Supermassive black holes actively accrete matter, emitting intense radiation and
+                    generating powerful jets from their accretion disks.<br><br>
+                    5. Cosmological Role:  : Supermassive black holes at galactic centers influence galaxy formation and dynamics, 
+                    shaping their structure through gravitational interactions.</p>
+                    <div class="border5"></div>
+                    </div>
+                    </div>
+        
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+    showBlackholes();
+  });
+    function showBlackholes() {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        planet.style.display = "none";
+      });
+      var content = document.getElementById("black-holes-content");
+      content.style.display = "block";
+    }
+    
+    function showtopic(planetId) {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        if (planet.id === planetId) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    }
+  </script>
+  </body>
+  </html>

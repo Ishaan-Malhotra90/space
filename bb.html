@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="bb.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="space.html">Discover</a></li>
+      <li><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Topics</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="bb-content">
+    <div class="bb-container">
+      <h>Big Bang Theory:</h>
+      <p>1. Cosmic Singularity:<br>
+        At the moment of the Big Bang, all matter, energy, space, and time were concentrated in an infinitely small and hot point known as a singularity. This singularity marked the beginning of the universe.
+        <br><br>
+        2. Rapid Expansion (Inflation):<br>
+        In a fraction of a second after the Big Bang, the universe underwent a period of rapid expansion known as cosmic inflation. This expansion caused the universe to grow exponentially in size and smoothed out irregularities in its early state.
+        <br>
+        3. Formation of Subatomic Particles:<br>
+        As the universe cooled down from its initial state, quarks and other subatomic particles formed. These particles eventually combined to form protons, neutrons, and electrons.
+        <br><br>
+        4. Nucleosynthesis:<br>
+        During the first few minutes after the Big Bang, the universe was extremely hot and dense, allowing for nuclear reactions to occur. These reactions fused hydrogen and helium nuclei, creating the primordial elements hydrogen, helium, and trace amounts of lithium and beryllium.
+        <br><br>
+        5. Cosmic Microwave Background (CMB) Radiation:<br>
+        About 380,000 years after the Big Bang, the universe had cooled enough for electrons to combine with nuclei, forming neutral atoms. This allowed photons (light particles) to travel freely through space for the first time, creating the cosmic microwave background radiation, a faint glow that permeates the universe. This radiation was detected in 1965 and provides strong evidence for the Big Bang.
+        <br><br>
+        6. Formation of Galaxies and Stars:<br>
+        As the universe continued to expand and cool, regions with slightly higher densities of matter attracted more matter through gravity. These denser regions gradually formed galaxies, stars, and other cosmic structures.
+        <br><br>
+        7. Cosmic Expansion:<br>
+        The expansion of the universe, initially proposed by Edwin Hubble based on the redshift of galaxies, continues to this day. This expansion is evidenced by the fact that galaxies are moving away from each other in all directions.</p>
+      <div class="border1"></div>
+      </div>
+      </div>
+
+  </body>
+  </html>

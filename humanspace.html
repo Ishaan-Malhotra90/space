@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="humanspace.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="showhumanspace()">Humans & Space</a></li>
+      <li><a href="#" onclick="showtopic('nasa-content')">NASA</a></li>
+      <li><a href="#" onclick="showtopic('isro-content')">ISRO</a></li>
+      <li><a href="#" onclick="showtopic('jaxa-content')">JAXA</a></li>
+      <li><a href="#" onclick="showtopic('csa-content')">CSA</a></li>
+      <li><a href="#" onclick="showtopic('roscosmos-content')">ROSKOSMOS</a></li>
+      <li><a href="space.html">Destination</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="humanspace-content">
+    <div id="humanspace-container">
+      <div class="container">
+      <h3>Humans & Space</h3>
+      <p>
+        Human exploration in space embodies our relentless quest for knowledge and our unyielding spirit
+        of adventure. From the historic moon landings to ongoing missions to Mars and beyond, we continuously
+         push the boundaries of our understanding. Collaborative efforts and private initiatives drive us 
+         towards establishing sustainable settlements on celestial bodies, while unlocking scientific 
+         breakthroughs and inspiring future generations to explore the vast wonders of the cosmos.</p>
+         <div class="border1"></div>
+    </div> 
+    </div>
+</div>
+  <div id="nasa-content">
+    <div class="nasa-container">
+      <h1>List of Missions by National Aeronautics and Space Administration</h1>
+      <ul class="nasatable">
+        <li class="links" style="--accent-color:white">
+            <div class="date">1961-1972</div>
+            <div class="title">Apollo Program</div>
+            <div class="descr">Series of manned lunar missions, including the first manned Moon landing in 1969.</div>
+        </li>
+        <li class="links" style="--accent-color:white">
+            <div class="date">1975</div>
+            <div class="title">Viking 1</div>
+            <div class="descr">First successful mission to land and operate on Mars.</div>
+        </li>
+        <li class="links" style="--accent-color:white">
+            <div class="date">1977</div>
+            <div class="title">Voyager 1</div>
+            <div class="descr">Explored Jupiter, Saturn, and continued into interstellar space.</div>
+        </li>
+        <li class="links" style="--accent-color:white">
+            <div class="date"> 1990</div>
+            <div class="title">Hubble Space Telescope </div>
+            <div class="descr"> Revolutionized astronomy with its stunning images and observations of distant galaxies and cosmic phenomena.</div>
+        </li>
+        <li class="links" style="--accent-color:white">
+            <div class="date">1997</div>
+            <div class="title"> Cassini-Huygens</div>
+            <div class="descr">Orbited Saturn and sent a probe to its moon, Titan.</div>
+        </li>
+        <li class="links" style="--accent-color:white">
+            <div class="date">1997</div>
+            <div class="title">Mars Pathfinder</div>
+            <div class="descr">Landed a rover on Mars to gather data and study the planet's surface.</div>
+        </li>
+        <li class="links" style="--accent-color:white">
+            <div class="date">1999</div>
+            <div class="title">Chandra X-ray Observatory</div>
+            <div class="descr">Studied X-ray emissions from high-energy regions in the universe, such as black holes and supernova remnants.</div>
+        </li>
+        <li class="links" style="--accent-color:white">
+            <div class="date">2003</div>
+            <div class="title"> Mars Exploration Rovers (Spirit and Opportunity)</div>
+            <div class="descr"> Explored the Martian surface and provided valuable data on Mars' geology and climate.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2003</div>
+            <div class="title"> Mars Express</div>
+            <div class="descr">Studied the Martian atmosphere, surface, and subsurface from orbit.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2003</div>
+            <div class="title">Spitzer Space Telescope</div>
+            <div class="descr">Observed the universe in infrared light, revealing new insights into star formation and exoplanets.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2004</div>
+            <div class="title"> Rosetta</div>
+            <div class="descr">Orbited and landed a probe on a comet to study its composition and evolution.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2006</div>
+            <div class="title">New Horizons</div>
+            <div class="descr">First mission to explore Pluto and its moons, providing detailed images and data.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2009</div>
+            <div class="title">Kepler Space Telescope</div>
+            <div class="descr"> Discovered thousands of exoplanets, revolutionizing our understanding of other solar systems.</div>
+        </li>
+        <li style="--accent-color:white">
+            <div class="date">2011</div>
+            <div class="title">Curiosity Rover</div>
+            <div class="descr"> Investigated Mars' habitability and potential for supporting microbial life.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2011</div>
+            <div class="title">Juno</div>
+            <div class="descr">Orbiting Jupiter to study its atmosphere, magnetic field, and auroras.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2018</div>
+            <div class="title">Insight</div>
+            <div class="descr"> Studying the interior of Mars to gain insights into the planet's formation and evolution.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2018</div>
+            <div class="title">Parker Solar Probe</div>
+            <div class="descr">Approaching the Sun to study its outer atmosphere and solar wind.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2018</div>
+            <div class="title">Transiting Exoplanet Survey Satellite (TESS)</div>
+            <div class="descr"> Studying the interior of Mars to gain insights into the planet's formation and evolution.</div>
+        </li>
+        <li  style="--accent-color:white">
+            <div class="date">2021</div>
+            <div class="title">James Webb Space Telescope</div>
+            <div class="descr">Searching for exoplanets using the transit method to detect periodic dips in starlight.</div>
+        </li>
+    </ul>          
+</div>
+</div>
+<div id="isro-content">
+    <div class="isro-container">
+        
+
+<h1>List of Missions by  Indian Space Research Organisation</h1>
+<ul class="isrotable">
+  <li class="links" style="--accent-color:white">
+      <div class="date">2005</div>
+      <div class="title">INSAT-4A</div>
+      <div class="descr">A communication satellite providing services in C and Ku frequency bands.</div>
+  </li>
+  <li class="links" style="--accent-color:white">
+      <div class="date">2007</div>
+      <div class="title"> INSAT-4CR</div>
+      <div class="descr"> A communication satellite providing services in C and Ku frequency bands.</div>
+  </li>
+  <li class="links" style="--accent-color:white">
+      <div class="date">2007</div>
+      <div class="title">INSAT-4B</div>
+      <div class="descr"> A communication satellite providing services in C and Ku frequency bands.</div>
+  </li>
+  <li class="links" style="--accent-color:white">
+      <div class="date">2007</div>
+      <div class="title">INSAT-4E</div>
+      <div class="descr"> A communication satellite providing services in C and Ku frequency bands.</div>
+  </li>
+  <li class="links" style="--accent-color:white">
+      <div class="date">2008</div>
+      <div class="title">Cartosat-2A</div>
+      <div class="descr"> An Earth observation satellite providing high-resolution imagery for cartographic applications.</div>
+  </li>
+  <li class="links" style="--accent-color:white">
+    <div class="date">2008</div>
+    <div class="title">Chandrayaan-1</div>
+    <div class="descr">India's first lunar exploration mission, discovered water molecules on the Moon.</div>
+</li>
+  <li class="links" style="--accent-color:white">
+      <div class="date"> 2011</div>
+      <div class="title"> INSAT-4C</div>
+      <div class="descr">An all-weather radar imaging satellite for agricultural, forestry, and disaster management applications.</div>
+  </li>
+  <li class="links" style="--accent-color:white">
+      <div class="date">2012</div>
+      <div class="title"> RISAT-1</div>
+      <div class="descr">Studied X-ray emissions from high-energy regions in the universe, such as black holes and supernova remnants.</div>
+  </li>
+  <li class="links" style="--accent-color:white">
+      <div class="date">2013</div>
+      <div class="title">Mangalyaan</div>
+      <div class="descr">India's first interplanetary mission, successfully reached Mars orbit.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date">2013</div>
+      <div class="title">INSAT-4F</div>
+      <div class="descr"> A communication satellite providing services in C and Ku frequency bands.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date">2013</div>
+      <div class="title">IRNSS-1A</div>
+      <div class="descr"> The first satellite of the Indian Regional Navigation Satellite System (IRNSS).</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date"> 2013</div>
+      <div class="title">GSAT-7</div>
+      <div class="descr"> A multi-band communication satellite for the Indian Navy.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date">2006</div>
+      <div class="title">New Horizons</div>
+      <div class="descr">First mission to explore Pluto and its moons, providing detailed images and data.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date"> 2013</div>
+      <div class="title"> INSAT-3D</div>
+      <div class="descr">  A meteorological satellite for enhanced weather monitoring and prediction.</div>
+  </li>
+  <li style="--accent-color:white">
+      <div class="date">2014</div>
+      <div class="title"> GSAT-14</div>
+      <div class="descr"> A communication satellite launched to provide communication services in India.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date"> 2016</div>
+      <div class="title">INSAT-3DR</div>
+      <div class="descr">An advanced meteorological satellite providing weather forecasting services.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date"> 2017</div>
+      <div class="title">GSAT-9</div>
+      <div class="descr"> A communication satellite for promoting regional cooperation among South Asian countries.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date">2018</div>
+      <div class="title">IRNSS-1I</div>
+      <div class="descr"> A replacement satellite for IRNSS-1A to maintain India's navigation services.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date">2018</div>
+      <div class="title"> GSAT-6A</div>
+      <div class="descr"> A communication satellite intended to provide mobile communication services in India.</div>
+  </li>
+  <li  style="--accent-color:white">
+      <div class="date">2019</div>
+      <div class="title">INSAT-4G</div>
+      <div class="descr"> A communication satellite providing services in C and Ku frequency bands.</div>
+  </li>
+  <li  style="--accent-color:white">
+    <div class="date">2019</div>
+    <div class="title">Chandrayaan-2</div>
+    <div class="descr"> A lunar mission to land a rover on the Moon's surface, orbiter still operational.</div>
+</li>
+</ul>
+</div>
+</div>
+        <div id="jaxa-content">
+            <div class="jaxa-container">
+              <h1>List of Missions by Japan Aerospace Exploration Agency</h1>
+              <ul class="jaxatable">
+                <li class="links" style="--accent-color:white">
+                    <div class="date">2003</div>
+                    <div class="title">Hayabusa</div>
+                    <div class="descr">Sample return mission from the asteroid Itokawa.</div>
+                </li>
+                <li class="links" style="--accent-color:white">
+                    <div class="date">2007</div>
+                    <div class="title">SELENE (Kaguya)</div>
+                    <div class="descr"> Orbiter mission to study the Moon's gravity and topography.</div>
+                </li>
+                <li class="links" style="--accent-color:white">
+                    <div class="date"> 2009</div>
+                    <div class="title"> H-II Transfer Vehicle (HTV)</div>
+                    <div class="descr"> Cargo resupply missions to the International Space Station.</div>
+                </li>
+                <li class="links" style="--accent-color:white">
+                    <div class="date">2009</div>
+                    <div class="title"> DESTINY</div>
+                    <div class="descr"> Astronomical observatory to study dark matter and dark energy.</div>
+                </li>
+                <li class="links" style="--accent-color:white">
+                    <div class="date">2010</div>
+                    <div class="title">IKAROS</div>
+                    <div class="descr">Demonstration of solar sail technology during a Venus flyby.</div>
+                </li>
+                <li class="links" style="--accent-color:white">
+                  <div class="date">2010</div>
+                  <div class="title">PLANET-C (AKATSUKI)</div>
+                  <div class="descr">Orbiter mission to study the atmosphere and weather of Venus.</div>
+              </li>
+              <li class="links" style="--accent-color:white">
+                <div class="date">2013</div>
+                <div class="title"> SPRINT-A</div>
+                <div class="descr">Observation of transient luminous events and thunderstorms on Earth.</div>
+              </li>
+                <li class="links" style="--accent-color:white">
+                    <div class="date"> 2014</div>
+                    <div class="title">PROCYON</div>
+                    <div class="descr"> Demonstration of deep space communication and imaging technology.</div>
+                </li>
+                <li class="links" style="--accent-color:white">
+                    <div class="date">2014</div>
+                    <div class="title">Hayabusa2</div>
+                    <div class="descr">Sample return mission from the asteroid Ryugu.</div>
+                </li>
+                <li  style="--accent-color:white">
+                    <div class="date">2016</div>
+                    <div class="title">ASTRO-H (Hitomi)</div>
+                    <div class="descr">X-ray astronomy observatory for studying hot astrophysical objects. </div>
+                </li>
+              </ul>
+               </div>
+               </div>
+                <div id="csa-content">
+                    <div class="csa-container">
+                      <h1>List of Missions by Canadian Space Agency</h1>
+                      <ul class="csatable">
+                        <li class="links" style="--accent-color:white">
+                            <div class="date">1995</div>
+                            <div class="title"> RADARSAT-1</div>
+                            <div class="descr"> Earth observation satellite for monitoring natural resources and environmental changes.</div>
+                        </li>
+                        <li class="links" style="--accent-color:white">
+                            <div class="date">2001</div>
+                            <div class="title">Canadarm2</div>
+                            <div class="descr"> Robotic arm used for assembly and maintenance tasks on the International Space Station.</div>
+                        </li>
+                        <li class="links" style="--accent-color:white">
+                            <div class="date"> 2003</div>
+                            <div class="title"> CanX-1</div>
+                            <div class="descr">First Canadian nanosatellite for technology demonstration and research.</div>
+                        </li>
+                        <li  style="--accent-color:white">
+                          <div class="date">2003</div>
+                          <div class="title"> SCISAT</div>
+                          <div class="descr">Atmospheric research satellite for studying ozone depletion and climate change.</div>
+                      </li>
+                        <li class="links" style="--accent-color:white">
+                            <div class="date">2007</div>
+                            <div class="title">RADARSAT-2</div>
+                            <div class="descr">Advanced Earth observation satellite with synthetic aperture radar capabilities.</div>
+                        </li>
+                        <li class="links" style="--accent-color:white">
+                            <div class="date">2008</div>
+                            <div class="title"> CanX-2</div>
+                            <div class="descr">Technology demonstration satellite for formation flying and communication experiments.</div>
+                        </li>
+                        <li class="links" style="--accent-color:white">
+                          <div class="date">2008</div>
+                          <div class="title">CanX-3</div>
+                          <div class="descr">Technology demonstration satellite for atmospheric sensing and tracking experiments.</div>
+                      </li>
+                      <li class="links" style="--accent-color:white">
+                        <div class="date">2013</div>
+                        <div class="title"> NEOSSat</div>
+                        <div class="descr">Observation of transient luminous events and thunderstorms on Earth.</div>
+                      </li>
+                        <li class="links" style="--accent-color:white">
+                            <div class="date"> 2014</div>
+                            <div class="title">PROCYON</div>
+                            <div class="descr">Space telescope for detecting and tracking near-Earth objects (NEOs).</div>
+                        </li>
+                        <li class="links" style="--accent-color:white">
+                            <div class="date">2014</div>
+                            <div class="title">CanX-4 and CanX-5</div>
+                            <div class="descr">Technology demonstration satellites for precision formation flying and imaging experiments.</div>
+                        </li>
+                        <li  style="--accent-color:white">
+                            <div class="date">2014</div>
+                            <div class="title">CanX-9</div>
+                            <div class="descr"> Technology demonstration satellite for high-accuracy positioning and navigation experiments.</div>
+                        </li>
+                        <li  style="--accent-color:white">
+                          <div class="date">2016</div>
+                          <div class="title">GHGSat-D</div>
+                          <div class="descr">Greenhouse gas monitoring satellite for detecting and measuring emissions.</div>
+                      </li>
+                        <li  style="--accent-color:white">
+                          <div class="date">2018</div>
+                          <div class="title">CanX-10</div>
+                          <div class="descr">Technology demonstration satellite for communication experiments using laser communication.</div>
+                      </li>
+                      <li  style="--accent-color:white">
+                        <div class="date">2018</div>
+                        <div class="title">CanX-11</div>
+                        <div class="descr">Technology demonstration satellite for high-precision attitude control experiments.</div>
+                    </li>
+                    <li  style="--accent-color:white">
+                      <div class="date">2018</div>
+                      <div class="title"> CanX-12</div>
+                      <div class="descr"> Technology demonstration satellite for inter-satellite communication experiments.</div>
+                  </li>
+                  <li  style="--accent-color:white">
+                    <div class="date">2018</div>
+                    <div class="title"> CanX-13</div>
+                    <div class="descr"> Technology demonstration satellite for testing advanced materials in space environment.</div>
+                </li>
+                <li  style="--accent-color:white">
+                  <div class="date">2019</div>
+                  <div class="title">RADARSAT Constellation</div>
+                  <div class="descr">Series of three Earth observation satellites for enhanced coverage and monitoring.</div>
+              </li>
+              <li  style="--accent-color:white">
+                <div class="date">2019</div>
+                <div class="title">GHGSat-C1 ("Iris")</div>
+                <div class="descr"> Greenhouse gas monitoring satellite for detecting and measuring emissions.</div>
+            </li>
+                      </ul>
+                        </div>
+                        </div>
+                        <div id="roscosmos-content">
+                            <div class="roscosmos-container">
+                              <h1>List of Missions by Russian Federal Space Agency</h1>
+                              <ul class="roscosmostable">
+                                <li class="links" style="--accent-color:white">
+                                    <div class="date">1957</div>
+                                    <div class="title">Lyotchik-Sputnik</div>
+                                    <div class="descr">First living creatures in space, dogs Belka and Strelka.</div>
+                                </li>
+                                <li class="links" style="--accent-color:white">
+                                    <div class="date">1959</div>
+                                    <div class="title"> Luna 2</div>
+                                    <div class="descr"> First human spaceflight, Yuri Gagarin.</div>
+                                </li>
+                                <li class="links" style="--accent-color:white">
+                                  <div class="date">1961</div>
+                                  <div class="title">Venus program</div>
+                                  <div class="descr">Missions to study Venus.</div>
+                              </li>
+                                <li class="links" style="--accent-color:white">
+                                    <div class="date">1964</div>
+                                    <div class="title"> Voskhod 1</div>
+                                    <div class="descr">First multi-crew spaceflight.</div>
+                                </li>
+                                <li  style="--accent-color:white">
+                                  <div class="date">1964</div>
+                                  <div class="title"> Zond program</div>
+                                  <div class="descr">Unmanned circumlunar missions.</div>
+                              </li>
+                              <li  style="--accent-color:white">
+                                <div class="date">1965</div>
+                                <div class="title">Prognoz</div>
+                                <div class="descr">Research satellite for studying the Earth's atmosphere and space weather.</div>
+                            </li>
+                                <li class="links" style="--accent-color:white">
+                                    <div class="date">1970</div>
+                                    <div class="title">Luna 16</div>
+                                    <div class="descr">First automated sample return from the Moon.</div>
+                                </li>
+                                <li class="links" style="--accent-color:white">
+                                  <div class="date">1970</div>
+                                  <div class="title">Venera 7</div>
+                                  <div class="descr">First successful landing on Venus.</div>
+                              </li>
+                                <li class="links" style="--accent-color:white">
+                                    <div class="date">1971</div>
+                                    <div class="title"> Soyuz 11</div>
+                                    <div class="descr"> First space station crew to perish on reentry.</div>
+                                </li>
+                                <li  style="--accent-color:white">
+                                  <div class="date"> 1971</div>
+                                  <div class="title">Mars 3</div>
+                                  <div class="descr">First successful Mars landing.</div>
+                              </li>
+                              <li class="links" style="--accent-color:white">
+                                <div class="date">1975</div>
+                                <div class="title">Venera 9</div>
+                                <div class="descr">First images of the Venusian surface.</div>
+                              </li>
+                                <li class="links" style="--accent-color:white">
+                                    <div class="date">1982</div>
+                                    <div class="title">Venera 13</div>
+                                    <div class="descr">Detailed analysis of Venus' atmosphere and surface.</div>
+                                </li>
+
+                              <li  style="--accent-color:white">
+                                <div class="date"> 1982</div>
+                                <div class="title">GLONASS</div>
+                                <div class="descr">Global Navigation Satellite System.</div>
+                            </li>
+                            <li  style="--accent-color:white">
+                              <div class="date">1985</div>
+                              <div class="title">Foton</div>
+                              <div class="descr"> Reentry capsule for scientific experiments.</div>
+                          </li>
+                          <li  style="--accent-color:white">
+                            <div class="date">1986</div>
+                            <div class="title">Mir</div>
+                            <div class="descr">First modular space station.</div>
+                        </li>
+                        <li  style="--accent-color:white">
+                          <div class="date">1988</div>
+                          <div class="title">Phobos program</div>
+                          <div class="descr">Mission to study Mars and its moon Phobos.</div>
+                      </li>
+                      <li  style="--accent-color:white">
+                        <div class="date">1989</div>
+                        <div class="title">Granat</div>
+                        <div class="descr"> X-ray astronomy satellite.</div>
+                    </li>
+                    <li  style="--accent-color:white">
+                      <div class="date">1995</div>
+                      <div class="title">Spektr</div>
+                      <div class="descr"> Module of the Mir space station for scientific research.</div>
+                  </li>
+                  <li  style="--accent-color:white">
+                    <div class="date">1999</div>
+                    <div class="title">Yamal</div>
+                    <div class="descr">Communications satellite.</div>
+                </li>
+                <li  style="--accent-color:white">
+                  <div class="date">2011</div>
+                  <div class="title">Soyuz TMA-21</div>
+                  <div class="descr">Crewed mission to the International Space Station.</div>
+              </li>
+              <li  style="--accent-color:white">
+                <div class="date">2011</div>
+                <div class="title">Spektr-R</div>
+                <div class="descr">Radio astronomy space observatory.</div>
+            </li>
+            
+                              </ul>
+                         
+                                  </div>
+                        </div>
+                                  
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+    showhumanspace();
+  });
+    function showhumanspace() {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        planet.style.display = "none";
+      });
+      var content = document.getElementById("humanspace-content");
+      content.style.display = "block";
+    }
+    
+    function showtopic(planetId) {
+      var planets = document.querySelectorAll('[id$="-content"]');
+      planets.forEach(function(planet) {
+        if (planet.id === planetId) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    }
+  </script>
+  </body>
+  </html>

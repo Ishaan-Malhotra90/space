@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="dmt.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="space.html">Discover</a></li>
+      <li><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Topics</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="dmt-content">
+    <div class="dmt-container">
+      <h>Dark Matter Theory:</h>
+      <p>1. Galactic Rotation Curves:<br>
+        Observations of galaxies' rotational velocities reveal unexpected behavior. According to Newtonian physics, stars farther from the center should move slower, but galaxies show a more constant speed. This discrepancy suggests the presence of unseen mass.
+        <br><br>
+        2. Missing Mass Problem:<br>
+        Based on the visible matter (stars, gas, and dust) in galaxies and galaxy clusters, their gravitational effects should be much weaker than observed. There must be additional mass exerting gravitational pull, or else galaxies would fly apart.
+        <br><br>
+        3. Gravitational Lensing:<br><br>
+        Clusters of galaxies can act as gravitational lenses, bending light from background objects. Observations of this lensing phenomenon reveal that there's more mass than can be accounted for by visible matter alone.
+        <br><br>
+        4. Cosmic Microwave Background (CMB):<br><br>
+        Measurements of the cosmic microwave background radiation—the afterglow of the Big Bang—show patterns in the distribution of matter in the early universe. These patterns suggest the existence of additional matter that's not visible.
+        <br><br>
+        5. Galaxy Cluster Dynamics:<br>
+        Observations of galaxy clusters, which contain hundreds of galaxies, also indicate the presence of more mass than can be seen. The motion of galaxies within clusters implies the influence of invisible matter.
+        <br><br>
+        6. Dark Matter Particles:<br>
+        The leading theory proposes that dark matter consists of particles that don't interact with electromagnetic forces, making them "dark" to our telescopes. Weakly Interacting Massive Particles (WIMPs) are one class of hypothetical dark matter candidates.
+        <br><br>
+        7. Evidence Accumulation:<br>
+        Over decades, accumulating evidence from galactic dynamics, gravitational lensing, CMB studies, and simulations of large-scale cosmic structure has bolstered the dark matter theory. However, direct detection of dark matter particles remains a challenge.
+        <br><br>
+        8. Dark Matter's Role:<br>
+        Dark matter's gravitational pull shapes the distribution of galaxies, galaxy clusters, and large-scale structures in the universe. Its presence helps explain the observed cosmic structures and provides stability for galaxies and galaxy clusters.</p>
+      <div class="border1"></div>
+      </div>
+      </div>
+
+  </body>
+  </html>

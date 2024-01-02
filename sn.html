@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solar System Navigation</title>
+  <link rel="stylesheet" href="sn.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="space.html">Discover</a></li>
+      <li><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Topics</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="sn-content">
+    <div class="sn-container">
+      <h>Big Bang Nucleosynthesis (Primordial Nucleosynthesis):</h>
+      <p>This early phase of nucleosynthesis occurred shortly after the Big Bang, when the universe was hot and dense. During this time, protons and neutrons combined to form helium and trace amounts of other light elements like lithium and beryllium. This process set the initial conditions for element abundances in the universe.</p>
+      <div class="border1"></div>
+        <h1>Stellar Nucleosynthesis (Stellar Fusion):</h1>
+        <p1>This process takes place within stars throughout their lifecycle. It's responsible for producing heavier elements, up to iron. Stellar nucleosynthesis occurs in different stages based on the size and type of the star:
+          <br><br>
+          1.Hydrogen Burning: In the core of main-sequence stars like our Sun, hydrogen nuclei (protons) fuse to form helium through a process known as nuclear fusion. This releases energy and powers the star's radiation and light.
+          <br><br>
+          2.Helium Burning: As the core contracts and heats up, more massive stars undergo helium burning. Helium nuclei fuse together to form heavier elements like carbon, oxygen, and neon.
+          <br><br>
+          3.Carbon and Oxygen Burning: In the late stages of massive stars' lives, when the core temperature becomes extremely high, carbon and oxygen nuclei can fuse to form even heavier elements like magnesium, silicon, and sulfur.
+          <br><br>
+          4.Supernova Explosions: When a massive star exhausts its nuclear fuel, its core collapses under gravity and rebounds in a supernova explosion. This explosion produces the energy and pressure needed for elements heavier than iron, like gold, silver, and uranium, to be formed in the intense conditions of the explosion.</p1>
+          <div class="border2"></div>
+      </div>
+      </div>
+
+  </body>
+  </html>

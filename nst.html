@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FactoidExpress</title>
+  <link rel="stylesheet" href="nst.css">
+</head>
+<body>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="space.html">Discover</a></li>
+      <li><a href="3dsolarsystem.html">3D Solar System</a></li>
+      <li><a href="theories.html">Topics</a></li>
+    </ul>
+    <img src="menu.png" class="menu-btn">
+  </nav>
+  <script>
+    const menubtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.navlinks');
+    const body = document.querySelector('body');
+  
+    menubtn.addEventListener('click', () => {
+      navlinks.classList.toggle('mobile-menu');
+    });
+  
+    body.addEventListener('click', (event) => {
+      // Check if the click happened outside the navbar or on a link within the navbar
+      if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+        navlinks.classList.remove('mobile-menu');
+      }
+    });
+  
+    // Add click event listener to all anchor tags within the navbar
+    const navLinks = document.querySelectorAll('.navlinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Close the mobile menu when a link is clicked
+        navlinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+  <div id="nst-content">
+    <div class="nst-container">
+      <h>Neutron Star Theory:</h>
+      <p>1. Supernova and Core Collapse:<br>
+        Massive stars, typically with masses around 8 to 30 times that of our Sun, exhaust their nuclear fuel. The outward pressure from nuclear reactions can no longer counteract the inward pull of gravity. This leads to a core collapse where protons and electrons are squeezed together to form neutrons.
+        <br><br>
+        2. Neutron Degeneracy Pressure:<br><br>
+        In the core collapse, electrons and protons combine to form neutrons and neutrinos. The resulting core is composed almost entirely of neutrons densely packed together. Neutron degeneracy pressure—the resistance of neutrons to being squeezed closer together due to the Pauli exclusion principle—supports the star against gravitational collapse.
+        <br><br>
+        3. Rapid Rotation and Conservation of Angular Momentum:<br>
+        As the core collapses, its rotation rate increases dramatically due to the conservation of angular momentum. This rapid rotation can cause neutron stars to spin hundreds of times per second. The conservation of angular momentum is akin to a skater pulling in their arms to spin faster.
+        <br><br>
+        4. Strong Magnetic Fields:<br>
+        Many neutron stars possess incredibly strong magnetic fields, thousands to billions of times stronger than Earth's magnetic field. These fields can influence the star's behavior, generating powerful magnetic storms and emitting X-rays and gamma rays.
+        <br><br>
+        5. Neutron Star Structure:<br>
+        Neutron stars have a crust composed of atomic nuclei and free electrons. Beneath the crust lies the inner crust, where neutrons mix with electrons. The core is dominated by densely packed neutrons. The extreme pressure and density in the core can lead to the formation of exotic matter like hyperons or even a quark-gluon plasma.
+        <br><br>
+        6. Observational Signatures:<br>
+        Neutron stars are observed through their emission of electromagnetic radiation, including X-rays and radio waves. Some neutron stars are categorized as pulsars—rotating neutron stars that emit beams of radiation along their magnetic poles. These beams of radiation sweep across Earth's line of sight, resulting in a regular pulsing signal.
+        <br><br>
+        7. Stellar Evolution Connection:<br>
+        Neutron stars are the remnants of massive stars that have undergone a supernova explosion. Their formation is a crucial part of stellar evolution, contributing to the recycling of matter and energy in the universe.
+        <br><br>
+        8. Neutron Star Collisions and Insights:<br>
+        Collisions of neutron stars can result in the release of gravitational waves, r-process nucleosynthesis (production of heavy elements), and the creation of gamma-ray bursts. The collision of two neutron stars was observed in 2017, providing valuable insights into these exotic objects.</p>
+      <div class="border1"></div>
+      </div>
+      </div>
+
+  </body>
+  </html>
