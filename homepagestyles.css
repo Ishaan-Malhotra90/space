@@ -443,7 +443,7 @@ font-family: 'Roboto Slab', serif;
   {
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 5vw;
     cursor: pointer;
     display: block;
     z-index: 3;
