@@ -458,7 +458,7 @@ nav ul li a {
 .timeline li > span:after {
 	content: "";
 	width: 50vmin;
-	text-shadow: 0 0 1px #000, 0 0 1px #000;
+	font-weight: bold;
 	font-size: 4vmin;
   text-align: center;
 }
